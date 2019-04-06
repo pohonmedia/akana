@@ -1,0 +1,4 @@
+##Ignore below files for production
+node_modules/
+*.lock
+*.log
