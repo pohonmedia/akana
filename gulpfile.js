@@ -7,6 +7,7 @@ const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 //dir
 var cssDir = './assets/css/';
@@ -83,7 +84,7 @@ function dev() {
         port: 8080
     });
     watch('./assets/sass/*.scss', sassdev);
-    watch('./', reload);
+    watch('./*.html', reload);
     // watch('./public/assets/js/*.js', jsmin);
 }
 
