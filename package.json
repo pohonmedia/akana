@@ -23,6 +23,7 @@
     "gulp-uglify": "^3.0.1"
   },
   "scripts": {
+    "worskpace": "gulp folder",
     "dev": "gulp"
   }
 }
