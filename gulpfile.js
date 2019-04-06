@@ -3,6 +3,7 @@ const notify = require('gulp-notify');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
@@ -14,6 +15,13 @@ var cssDir = './assets/css/';
 var jsDir = './assets/js/';
 var sassDir = './assets/sass/*.scss';
 var imgDir = './assets/img/';
+
+//css plugin
+var animate = 'node_modules/animate.css/animate.min.css';
+var bootstrap = "node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+//js plugin
+var bootstrapJs = "node_modules/bootstrap/dist/js/bootstrap.min.js";
 
 //make structural folder
 function folder() {
@@ -31,7 +39,7 @@ function folder() {
 
 // manage js asset
 function jsAsset() {
-    return src([])
+    return src([bootstrapJs])
         .pipe(plumber())
         .pipe(concat('plugin.min.js'))
         .pipe(uglify())
@@ -43,7 +51,7 @@ function jsAsset() {
 
 // manage css asset
 function cssAsset() {
-    return src([])
+    return src([animate, bootstrap])
         .pipe(plumber())
         .pipe(concat('plugin.min.css'))
         .pipe(postcss([autoprefixer(), cssnano()]))

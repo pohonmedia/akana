@@ -5,6 +5,7 @@
   "author": "Iqbal <hello@iqbaldesignui.com>",
   "license": "MIT",
   "dependencies": {
+    "animate.css": "^3.7.0",
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
