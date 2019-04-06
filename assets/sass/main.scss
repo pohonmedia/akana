@@ -1,10 +1,18 @@
-
-/*! ########## Main schemes ########## */
-
+$color--primary : #3A5BFF;
+$color-secondary: #3d3d3d;
 $font-color--primary: #fafafa;
 $font-color--secondary: #212121;
+$font-weight--light : 300;
+$font-weight--regular : 400;
+$font-weight--medium : 500;
+$font-weight--bold : 700;
 
-/*! ########## Custom styling ########## */
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: $font-weight--regular;
+    background-color: $color-secondary;
+}
+
 .bg{
     background-image: url("../img/bg-asset--1.jpg");
     background-color: #212121;
@@ -17,6 +25,53 @@ $font-color--secondary: #212121;
 
 .mask{
     background: linear-gradient(rgba(61, 61, 61, 0.46) 0%, #3d3d3d 100%); 
-    height: 100vh;
+    min-height: 100vh;
 }
 
+.c-fold-container{
+    min-height:100vh; text-align: center
+}
+
+.o-fold-img{
+    min-width: 150px;
+    height: 75px;
+}
+
+.o-fold-container__title{
+    font-size:70px; 
+    font-weight:700; 
+    color:$font-color--primary; 
+    letter-spacing: 1px; 
+}
+
+@mixin base-btn($bg){
+    min-height: 60px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 2px;
+    max-width: 250px;
+    background-color: $bg;
+    border: 4px solid $color--primary;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.o-btn--primary{
+    @include base-btn($color--primary);
+}
+
+.o-btn--secondary{ 
+    @include base-btn(transparent);
+}
+
+// responsive
+@media only screen and (max-width:600px){
+    .o-fold-container__title{
+        font-size: 60px;
+    }
+
+    .o-btn--secondary{
+        margin-top: 20px;
+    }
+}
