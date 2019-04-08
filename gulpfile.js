@@ -22,6 +22,8 @@ var bootstrap = "node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 //js plugin
 var bootstrapJs = "node_modules/bootstrap/dist/js/bootstrap.min.js";
+var nicescroll = "node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js";
+
 
 //make structural folder
 function folder() {
@@ -39,7 +41,7 @@ function folder() {
 
 // manage js asset
 function jsAsset() {
-    return src([bootstrapJs])
+    return src([bootstrapJs, nicescroll])
         .pipe(plumber())
         .pipe(concat('plugin.min.js'))
         .pipe(uglify())
