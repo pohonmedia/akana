@@ -14,6 +14,8 @@
 
     <!-- font asset -->
     <link href="https://fonts.googleapis.com/css?family=PT+Serif|Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!-- icon asset -->
     <link rel="icon" href="./assets/img/favicon_io/favicon.ico">
@@ -23,7 +25,6 @@
 
 <body>
 
-    <!-- start: above the fold -->
     <div class="bg">
         <div class="mask">
             <div class="container d-flex align-items-center justify-content-center c-fold-container">
@@ -36,14 +37,14 @@
                         </h1>
                         <div class="row no-gutters animated fadeInDown delay-2s" style="margin-top:50px;">
                             <div class="col-lg-6 d-flex justify-content-center">
-                                <button type="button" class="btn btn-primary btn-lg btn-block o-btn--primary">
+                                <a id="myButton" href="#about" class="btn btn-primary btn-lg btn-block o-btn--primary">
                                     About Us
-                                </button>
+                                </a>
                             </div>
                             <div class="col-lg-6 d-flex justify-content-center">
-                                <button type="button" class="btn btn-primary btn-lg btn-block o-btn--secondary">
+                                <a href="#services" class="btn btn-primary btn-lg btn-block o-btn--secondary">
                                     Contact Us
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -54,7 +55,7 @@
     <!-- end: above the fold -->
 
     <!-- start: about us -->
-    <div class="container mh-50">
+    <div class="container mh-50" id="about">
         <div class="row no-gutters">
             <div class="col-6">
                 <div class="c-about">
@@ -74,7 +75,8 @@
                         budget.
                     </p>
                     <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-primary btn-block o-btn__about">
+                        <button type="button"
+                            class="btn btn-primary btn-block o-btn__about animated pulse infinite slower">
                             our company profile
                         </button>
                     </div>
@@ -89,10 +91,117 @@
     </div>
     <!-- end: about us -->
 
+    <!-- start: services & contact -->
+    <div class="container" id="services">
+        <div class="row">
+            <div class="col-8">
+                <div class="c-services">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="o-services-title">our services</h1>
+                        </div>
 
+                        <!-- start: services #1 -->
+                        <div class="col-6 c-services-card">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-2">
+                                    <i class="fas fa-bus o-services-card fa-2x o-services-card__icon"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h2 class="o-services__card-title"> Our services 1 </h2>
+                                </div>
+                            </div>
+                            <p class="o-services-card__wording">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ullam itaque omnis
+                                iste, quos nobis voluptatibus, eos amet tenetur illo vitae facilis provident quidem esse
+                                enim a, hic aliquam inventore?
+                            </p>
+                        </div>
+                        <!-- end: services #1 -->
+
+                        <!-- start: services #2 -->
+                        <div class="col-6 c-services-card">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-concierge-bell o-services-card fa-2x o-services-card__icon"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h2 class="o-services__card-title"> our services 2 </h2>
+                                </div>
+                            </div>
+                            <p class="o-services-card__wording">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ullam itaque omnis
+                                iste, quos nobis voluptatibus, eos amet tenetur illo vitae facilis provident quidem esse
+                                enim a, hic aliquam inventore?
+                            </p>
+                        </div>
+                        <!-- end: services #2 -->
+
+                        <!-- start: services #3 -->
+                        <div class="col-6 c-services-card">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-suitcase-rolling o-services-card fa-2x o-services-card__icon"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h2 class="o-services__card-title"> our services 3 </h2>
+                                </div>
+                            </div>
+                            <p class="o-services-card__wording">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ullam itaque omnis
+                                iste, quos nobis voluptatibus, eos amet tenetur illo vitae facilis provident quidem esse
+                                enim a, hic aliquam inventore?
+                            </p>
+                        </div>
+                        <!-- end: services #3 -->
+
+                        <!-- start: services #4 -->
+                        <div class="col-6 c-services-card">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-hotel o-services-card fa-2x o-services-card__icon"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h2 class="o-services__card-title"> our services 4 </h2>
+                                </div>
+                            </div>
+                            <p class="o-services-card__wording">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ullam itaque omnis
+                                iste, quos nobis voluptatibus, eos amet tenetur illo vitae facilis provident quidem esse
+                                enim a, hic aliquam inventore?
+                            </p>
+                        </div>
+                        <!-- end: services #4 -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel voluptates autem id debitis quis
+                perspiciatis reiciendis, nostrum dolore asperiores incidunt odit, natus blanditiis. Quibusdam natus,
+                nostrum adipisci nam odit consequatur?
+            </div>
+        </div>
+    </div>
+    <!-- end: services & contact -->
 
     <!-- js asset -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="./assets/js/plugin.min.js"></script>
+
+    <!-- js script -->
+    <script>
+        $(document).ready(function () {
+            console.log("ready!");
+
+            //scroll
+            $("body").niceScroll({
+                cursorcolor: "#eaeaea",
+                cursorwidth: "5px"
+            });
+        });
+    </script>
+
 </body>
 
-</html>
+</html
