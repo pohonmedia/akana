@@ -7,6 +7,7 @@ const uglify = require('gulp-uglify');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
+const purgecss = require('gulp-purgecss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
@@ -55,7 +56,7 @@ function jsAsset() {
 function cssAsset() {
     return src([bootstrap, animate])
         .pipe(plumber())
-        .pipe(concat('plugin.min.css'))
+        .pipe(concat('plugin.css'))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(dest(cssDir))
         .pipe(notify({
@@ -71,12 +72,19 @@ function sassdev() {
             errorLogToConsole: true
         }))
         .on('error', console.error.bind(console))
-        .pipe(rename({
-            suffix: '.min'
-        }))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(dest(cssDir))
         .pipe(browserSync.stream());
+}
+
+//minify css
+function minify() {
+    return src('./assets/css/*.css')
+        .pipe(purgecss({ content: ['*.html'] }))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(dest('./assets/css/'));
 }
 
 //reload
@@ -102,4 +110,5 @@ exports.updateAsset = parallel(cssAsset, jsAsset);
 exports.updateCss = cssAsset;
 exports.updateJs = jsAsset;
 exports.folder = folder;
-exports.default = dev;
+exports.minify = minify;
+exports.default = parallel(dev, minify);
