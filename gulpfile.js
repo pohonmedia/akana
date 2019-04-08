@@ -51,7 +51,7 @@ function jsAsset() {
 
 // manage css asset
 function cssAsset() {
-    return src([animate, bootstrap])
+    return src([bootstrap, animate])
         .pipe(plumber())
         .pipe(concat('plugin.min.css'))
         .pipe(postcss([autoprefixer(), cssnano()]))
