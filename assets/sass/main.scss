@@ -9,6 +9,7 @@ $font-weight--bold : 700;
 $font-family--primary: 'Roboto', sans-serif;
 $font-family--secondary : 'PT Serif', serif;
 
+
 body{
     font-family: 'Roboto', sans-serif;
     font-weight: $font-weight--regular;
@@ -72,7 +73,27 @@ body{
     min-width: 250px;
     max-width: 325px;
     margin-bottom:1em;
+}
 
+%title{
+     font-weight:600; 
+    text-transform:capitalize;
+    color: $font-color--primary;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+@mixin wording($color) {
+    font-family: $font-family--secondary;
+    color: $color;
+    padding: 1em 0em;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    
+}
+
+#about{
+    padding: 20px;
 }
 
 .c-about{
@@ -80,21 +101,41 @@ body{
 }
 
 .o-about-title{
-    font-weight:600; 
-    text-transform:capitalize;
-    color: $font-color--primary;
-    font-size: 2em;
-    letter-spacing: 1px;
+    @extend %title;
 }
 
 .o-about-wording{
-    font-family: $font-family--secondary;
-color: #eaeaea;
-padding: 1em 0em;
-letter-spacing: 1px;
-line-height: 1.5em;
-font-size: 0.85em;
+    @include wording(#eaeaea);
+}
 
+#services{
+    padding: 20px;
+    height:50vh; 
+    margin-top:5em;
+}
+
+.o-services-title{
+    @extend %title;
+    margin-bottom: 0.5em;
+}
+
+.c-services-card{
+ margin-top: 1em;
+}
+
+.o-services__card-title{
+    @extend %title;
+    color: #eaeaea;
+    font-size: 1.5em;
+}
+
+.o-services-card__icon{
+    color: #eaeaea;
+}
+
+.o-services-card__wording{
+    @include wording(#e4e4e4);
+    line-height: 1.5em;
 }
 
 // responsive
