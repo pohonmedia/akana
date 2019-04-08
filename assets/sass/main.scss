@@ -138,6 +138,21 @@ body{
     line-height: 1.5em;
 }
 
+.o-contact__card-title{
+    @extend %title;
+    color: #eaeaea;
+    font-size: 1.5em;
+}
+
+.o-contact-card__icon{
+    color: #eaeaea;
+}
+
+.o-contact-card__wording{
+    @include wording(#e4e4e4);
+    padding-left: 2em;
+}   
+
 // responsive
 @media only screen and (max-width:600px){
     .o-fold-container__title{
