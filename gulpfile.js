@@ -79,7 +79,7 @@ function sassdev() {
 
 //minify css
 function minify() {
-    return src('./assets/css/*.css')
+    return src('./assets/css/main.css')
         .pipe(purgecss({ content: ['*.html'] }))
         .pipe(rename({
             suffix: '.min'
@@ -111,4 +111,4 @@ exports.updateCss = cssAsset;
 exports.updateJs = jsAsset;
 exports.folder = folder;
 exports.minify = minify;
-exports.default = parallel(dev, minify);
+exports.default = dev;
