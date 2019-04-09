@@ -1,5 +1,5 @@
 $color--primary : #3A5BFF;
-$color-secondary: #3d3d3d;
+$color-secondary: #0D6B75;
 $font-color--primary: #fafafa;
 $font-color--secondary: #212121;
 $font-weight--light : 300;
@@ -18,7 +18,7 @@ body{
 
 .bg{
     background-image: url("../img/bg-asset-1.webp");
-    background-color: #212121;
+    background-color: #0D6B75;
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,7 +27,7 @@ body{
 }
 
 .mask{
-    background: linear-gradient(rgba(61, 61, 61, 0.46) 0%, #3d3d3d 100%); 
+    background: linear-gradient(rgba(61, 61, 61, 0.46) 0%, #0D6B75 100%); 
     min-height: 100vh;
 }
 
