@@ -1,5 +1,5 @@
-$color--primary : #3A5BFF;
-$color-secondary: #0D6B75;
+$color--primary : #079EA5;
+$color--secondary: #BF8C26;
 $font-color--primary: #fafafa;
 $font-color--secondary: #212121;
 $font-weight--light : 300;
@@ -13,21 +13,21 @@ $font-family--secondary : 'PT Serif', serif;
 body{
     font-family: 'Roboto', sans-serif;
     font-weight: $font-weight--regular;
-    background-color: $color-secondary;
+    background-color: #079EA5;
 }
 
 .bg{
-    background-image: url("../img/bg-asset-1.webp");
-    background-color: #0D6B75;
+    background-image: url("../img/bg-asset--3.png");
+    background-color: #079EA5;
     height: 100vh;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
 .mask{
-    background: linear-gradient(rgba(61, 61, 61, 0.46) 0%, #0D6B75 100%); 
+    background: linear-gradient(rgba(61, 61, 61, 0.46) 0%, #079EA5 100%); 
     min-height: 100vh;
 }
 
@@ -37,7 +37,7 @@ body{
 
 .o-fold-img{
     min-width: 150px;
-    height: 75px;
+    height: 150px;
 }
 
 .o-fold-container__title{
@@ -59,7 +59,7 @@ body{
 }
 
 .o-btn--primary{
-    @include base-btn($color--primary);
+    @include base-btn(#BF8C26);
     max-width: 250px;
 }
 
@@ -69,7 +69,7 @@ body{
 }
 
 .o-btn__about{
-    @include base-btn($color--primary);
+    @include base-btn($color--secondary);
     min-width: 250px;
     max-width: 325px;
     margin-bottom:1em;
@@ -93,7 +93,7 @@ body{
 }
 
 #about{
-    padding: 20px;
+    padding: 50px;
 }
 
 .c-about{
@@ -111,7 +111,7 @@ body{
 #services{
     padding: 20px;
     height:50vh; 
-    margin-top:5em;
+    margin-top:2em;
 }
 
 .o-services-title{
@@ -152,6 +152,10 @@ body{
     @include wording(#e4e4e4);
     padding-left: 2em;
 }   
+
+.o-services-text{
+    font-size:1.2em; padding-top:20px; text-transform: capitalize; color: #fafafa;
+}
 
 // responsive
 @media only screen and (max-width:600px){
