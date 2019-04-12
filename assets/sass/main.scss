@@ -17,7 +17,7 @@ body{
 }
 
 .bg{
-    background-image: url("../img/bg-asset--3.png");
+    background-image: url("../img/bg-asset-3.webp");
     background-color: #079EA5;
     height: 100vh;
     background-position: bottom;
@@ -73,6 +73,10 @@ body{
     min-width: 250px;
     max-width: 325px;
     margin-bottom:1em;
+    &:hover{
+        @include base-btn(#fafafa);
+        color:$color--secondary;
+    }
 }
 
 %title{
@@ -158,9 +162,13 @@ body{
 }
 
 // responsive
-@media only screen and (max-width:600px){
+@media only screen and (max-width:700px){
     .o-fold-container__title{
-        font-size: 60px;
+        font-size: 40px;
+    }
+
+    .fab{
+        font-size: 30px !important;
     }
 
     .o-btn--secondary{
