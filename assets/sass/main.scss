@@ -88,7 +88,7 @@ body{
 }
 
 @mixin wording($color) {
-    font-family: $font-family--secondary;
+    font-family: $font-family--primary;
     color: $color;
     padding: 1em 0em;
     letter-spacing: 1px;
