@@ -1,22 +1,85 @@
-$color--primary : #079EA5;
-$color--secondary: #BF8C26;
+$color--primary : #039EA5;
+$color--secondary: #BE8C2C;
+$color--transparent: transparent;
 $font-color--primary: #fafafa;
 $font-color--secondary: #212121;
 $font-weight--light : 300;
 $font-weight--regular : 400;
 $font-weight--medium : 500;
 $font-weight--bold : 700;
-$font-family--primary: 'Roboto', sans-serif;
-$font-family--secondary : 'PT Serif', serif;
+$font-family--primary: 'Roboto',
+sans-serif;
+$font-family--secondary : 'PT Serif',
+serif;
 
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     font-weight: $font-weight--regular;
-    background-color: #079EA5;
 }
 
-.bg{
+
+//base styling
+
+@mixin btn($bg) {
+    min-height: 40px;
+    min-width: 150px;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: $font-color--primary;
+    letter-spacing: 2px;
+    background-color: $bg;
+    font-weight: 500;
+    border-top-right-radius: 15px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 15px !important;
+    border-bottom-right-radius: 0px !important;
+
+    &:hover {
+        box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+    }
+
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+%btn-primary {
+    @include btn($color--primary);
+    border: 2px solid $color--primary;
+}
+
+%btn-secondary {
+    @include btn($color--transparent);
+    border: 2px solid $color--secondary;
+    color: $font-color--primary;
+
+    &:active {
+        background-color: $color--primary !important;
+        border-color: $color--primary !important;
+    }
+
+    &:hover {
+        background-color: $color--secondary;
+        border-color: $color--secondary;
+    }
+
+}
+
+.c-btn--primary {
+    @extend %btn-primary;
+}
+
+.c-btn--secondary {
+    @extend %btn-secondary;
+}
+
+
+/*!
+ * Under construction layout
+ */
+
+.bg {
     background-image: url("../img/bg-asset-3.webp");
     background-color: #079EA5;
     height: 100vh;
@@ -26,28 +89,29 @@ body{
     position: relative;
 }
 
-.mask{
-    background: linear-gradient(rgba(61, 61, 61, 0.46) 0%, #079EA5 100%); 
+.mask {
+    background: linear-gradient(rgba(61, 61, 61, 0.46) 0%, #079EA5 100%);
     min-height: 100vh;
 }
 
-.c-fold-container{
-    min-height:100vh; text-align: center
+.c-fold-container {
+    min-height: 100vh;
+    text-align: center
 }
 
-.o-fold-img{
+.o-fold-img {
     min-width: 150px;
     height: 150px;
 }
 
-.o-fold-container__title{
-    font-size:70px; 
-    font-weight:700; 
-    color:$font-color--primary; 
-    letter-spacing: 1px; 
+.o-fold-container__title {
+    font-size: 70px;
+    font-weight: 700;
+    color: $font-color--primary;
+    letter-spacing: 1px;
 }
 
-@mixin base-btn($bg){
+@mixin base-btn($bg) {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 20px;
@@ -58,30 +122,31 @@ body{
     border-bottom-left-radius: 20px;
 }
 
-.o-btn--primary{
+.o-btn--primary {
     @include base-btn(#BF8C26);
     max-width: 250px;
 }
 
-.o-btn--secondary{ 
+.o-btn--secondary {
     @include base-btn(transparent);
     max-width: 250px;
 }
 
-.o-btn__about{
+.o-btn__about {
     @include base-btn($color--secondary);
     min-width: 250px;
     max-width: 325px;
-    margin-bottom:1em;
-    &:hover{
+    margin-bottom: 1em;
+
+    &:hover {
         @include base-btn(#fafafa);
-        color:$color--secondary;
+        color: $color--secondary;
     }
 }
 
-%title{
-     font-weight:600; 
-    text-transform:capitalize;
+%title {
+    font-weight: 600;
+    text-transform: capitalize;
     color: $font-color--primary;
     font-size: 2em;
     letter-spacing: 1px;
@@ -93,85 +158,151 @@ body{
     padding: 1em 0em;
     letter-spacing: 1px;
     line-height: 1.5em;
-    
+
 }
 
-#about{
+#about {
     padding: 50px;
 }
 
-.c-about{
+.c-about {
     max-width: 500px;
 }
 
-.o-about-title{
+.o-about-title {
     @extend %title;
 }
 
-.o-about-wording{
+.o-about-wording {
     @include wording(#eaeaea);
 }
 
-#services{
+#services {
     padding: 20px;
-    height:50vh; 
-    margin-top:2em;
+    height: 50vh;
+    margin-top: 2em;
 }
 
-.o-services-title{
+.o-services-title {
     @extend %title;
     margin-bottom: 0.5em;
 }
 
-.c-services-card{
- margin-top: 1em;
+.c-services-card {
+    margin-top: 1em;
 }
 
-.o-services__card-title{
+.o-services__card-title {
     @extend %title;
     color: #eaeaea;
     font-size: 1.5em;
 }
 
-.o-services-card__icon{
+.o-services-card__icon {
     color: #eaeaea;
 }
 
-.o-services-card__wording{
+.o-services-card__wording {
     @include wording(#e4e4e4);
     line-height: 1.5em;
 }
 
-.o-contact__card-title{
+.o-contact__card-title {
     @extend %title;
     color: #eaeaea;
     font-size: 1.5em;
 }
 
-.o-contact-card__icon{
+.o-contact-card__icon {
     color: #eaeaea;
 }
 
-.o-contact-card__wording{
+.o-contact-card__wording {
     @include wording(#e4e4e4);
     padding-left: 2em;
-}   
+}
 
-.o-services-text{
-    font-size:1.2em; padding-top:20px; text-transform: capitalize; color: #fafafa;
+.o-services-text {
+    font-size: 1.2em;
+    padding-top: 20px;
+    text-transform: capitalize;
+    color: #fafafa;
 }
 
 // responsive
-@media only screen and (max-width:700px){
-    .o-fold-container__title{
+@media only screen and (max-width:700px) {
+    .o-fold-container__title {
         font-size: 40px;
     }
 
-    .fab{
+    .fab {
         font-size: 30px !important;
     }
 
-    .o-btn--secondary{
+    .o-btn--secondary {
         margin-top: 20px;
+    }
+}
+
+
+/*!
+ * Index layout
+ */
+
+.c-navbar {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    z-index: 10;
+    border-radius: 0;
+    border-color: transparent;
+
+    .c-nav-link {
+        margin-left: 5em;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: $font-color--primary;
+    }
+}
+
+.c-carousel {
+
+    .carousel-item {
+
+        max-height: 100vh !important;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .carousel-caption {
+            bottom: 0px !important;
+            top: 30%;
+            left: 10% !important;
+            text-align: left;
+            max-width: 550px;
+
+            h5 {
+                font-size: 1.5em;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+
+            p {
+                padding-top: 1em;
+                padding-bottom: 1em;
+                letter-spacing: 1px;
+                font-weight: lighter;
+            }
+        }
+
     }
 }
