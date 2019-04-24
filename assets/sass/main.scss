@@ -260,7 +260,7 @@ body {
     position: fixed;
     width: 100%;
     background-color: transparent;
-    z-index: 10;
+    z-index: 50;
     border-radius: 0;
     border-color: transparent;
 
@@ -274,8 +274,21 @@ body {
 }
 
 .scrolled {
-    background-color: dodgerblue;
+    background-color: white;
     transition: 0.3s;
+    color: $color--secondary !important;
+
+    .c-nav-link {
+        color: $font-color--secondary !important;
+    }
+
+    .c-btn--secondary {
+        color: $color--secondary;
+
+        &:hover {
+            color: $font-color--primary;
+        }
+    }
 }
 
 .c-carousel {
