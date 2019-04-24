@@ -66,6 +66,13 @@ body {
 
 }
 
+%border-custom {
+    border-top-right-radius: 15px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 15px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
 .c-btn--primary {
     @extend %btn-primary;
 }
@@ -123,7 +130,7 @@ body {
 }
 
 .o-btn--primary {
-    @include base-btn(#BF8C26);
+    @include base-btn($color--primary);
     max-width: 250px;
 }
 
@@ -266,6 +273,11 @@ body {
     }
 }
 
+.scrolled {
+    background-color: dodgerblue;
+    transition: 0.3s;
+}
+
 .c-carousel {
 
     .carousel-item {
@@ -288,7 +300,7 @@ body {
             top: 30%;
             left: 10% !important;
             text-align: left;
-            max-width: 550px;
+            max-width: 580px;
 
             h5 {
                 font-size: 1.5em;
@@ -304,5 +316,118 @@ body {
             }
         }
 
+    }
+}
+
+.c-card-category {
+    @extend %border-custom;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.16);
+    border: none !important;
+    background-color: $color--primary;
+    color: $font-color--primary;
+    margin-top: -6em;
+    margin-bottom: 1em;
+    min-height: 90px;
+    padding: 15px;
+    border-radius: 15px;
+
+    .c-title {
+        h1 {
+            font-size: 25px;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    .c-content {
+        .o-img {
+            width: 85px;
+            height: 85px;
+        }
+
+        span {
+            font-size: 1.2em;
+        }
+    }
+
+}
+
+.c-packages-recomendation {
+
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+    .c-title {
+        margin-bottom: 60px;
+
+        h1 {
+            font-size: 2em;
+            color: $font-color--secondary;
+            letter-spacing: 1.5px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        hr {
+            border-top: 5px solid $color--primary;
+            border-radius: 10px;
+            width: 30%;
+        }
+    }
+
+    .c-card--big {
+        min-height: 350px;
+        max-height: 350px;
+        border: none;
+        margin-left: 50px;
+        // box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.16);
+        border-radius: 15px;
+
+        .card-img {
+            height: 100%;
+            background-size: cover;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        .card-body {
+            padding-left: 30px;
+            min-height: 100%;
+
+            .c-card-content {
+                font-size: 12px;
+                letter-spacing: 1.5px;
+
+                .o-btn--primary {
+                    @include btn($color--primary);
+                    border: 2px solid $color--primary;
+                    min-height: 35px;
+                    padding-top: 10px;
+                    font-size: 1.3em;
+                }
+            }
+        }
+
+    }
+
+    .c-card--small {
+        box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.16);
+        border: none;
+        border-radius: 10px;
+
+        .o-btn--primary {
+            @include btn($color--primary);
+            border: 2px solid $color--primary;
+            max-height: 25px;
+            padding-top: 5px;
+            font-size: 18px;
+        }
     }
 }
