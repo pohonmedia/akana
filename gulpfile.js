@@ -60,9 +60,13 @@ function minify() {
         }));
 }
 
-function watching() {
+function build() {
     nunjucks();
     minify();
+}
+
+function watching() {
+    build();
 
     browserSync.init({
         server: {
@@ -79,4 +83,5 @@ function watching() {
 exports.js = js;
 exports.css = css;
 exports.render = nunjucks;
+exports.build = build;
 exports.default = watching;
