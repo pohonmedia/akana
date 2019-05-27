@@ -36,7 +36,10 @@ function nunjucks() {
         .pipe(nunjucksRender({
             path: [COMPILE.TMP]
         }))
-        .pipe(dest(COMPILE.DST));
+        .pipe(dest(COMPILE.DST))
+        .pipe(notify({
+            message: 'Render berhasil bos'
+        }));
 }
 
 
@@ -59,6 +62,7 @@ function minify() {
 
 function watching() {
     nunjucks();
+    minify();
 
     browserSync.init({
         server: {
