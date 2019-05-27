@@ -21,7 +21,7 @@ var ASSETS = {
 
 //nunjucks dir
 var COMPILE = {
-    SRC: './app/pages/**/*.+(html|njk)',
+    SRC: './app/pages/*.+(html|njk)',
     TMP: './app/template/',
     DST: './app'
 };
@@ -127,7 +127,7 @@ function minify() {
         }));
 };
 
-function build(done) {
+function build(cb) {
     nunjucks()
     minify()
         .pipe(plumber({
@@ -141,21 +141,23 @@ function build(done) {
         .pipe(notify({
             message: 'Build berhasil bos'
         }));
-    done();
+    cb();
 };
 
 function watching() {
-    build();
+    // nunjucks()
+    minify()
 
     browserSync.init({
         server: {
             baseDir: "./"
         },
-        startPath: 'app/index.html',
+        startPath: './app/index.html',
         port: 3000
     });
     watch('./dst/sass/*.scss', minify).on('change', browserSync.reload);
     watch(COMPILE.SRC, nunjucks).on('change', browserSync.reload);
+    watch(COMPILE.TMP, nunjucks).on('change', browserSync.reload);
 };
 
 exports.folder = folder;
