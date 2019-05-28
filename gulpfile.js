@@ -2,12 +2,22 @@ const { src, dest, parallel, watch } = require('gulp');
 var nunjucksRender = require('gulp-nunjucks-render');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
+const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const uglify = require('gulp-uglify');
+
+//asset css
+var bootstrapCSS = './node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+//asset js
+var bootstrapJS = './node_modules/bootstrap/dist/js/bootstrap.min.js';
+var jqueryJS = './node_modules/jquery/dist/jquery.slim.min.js';
+var popperJS = './node_modules/jquery/dist/popper.min.js';
 
 //assets dir
 var ASSETS = {
@@ -48,9 +58,9 @@ function folder() {
         }));
 };
 
-// moving js
-function js() {
-    return src()
+// moving css
+function css() {
+    return src(bootstrapCSS)
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({
@@ -59,15 +69,17 @@ function js() {
                 })(err);
             }
         }))
-        .pipe(dest(ASSETS.JS))
+        .pipe(concat('plugin.min.css'))
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(dest(ASSETS.CSS))
         .pipe(notify({
             message: 'Mindah <%= file.relative %>'
         }));
 };
 
-// moving css
-function css() {
-    return src()
+// moving js
+function js() {
+    return src(bootstrapJS)
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({
@@ -76,7 +88,9 @@ function css() {
                 })(err);
             }
         }))
-        .pipe(dest(ASSETS.CSS))
+        .pipe(concat('plugin.min.js'))
+        .pipe(uglify())
+        .pipe(dest(ASSETS.JS))
         .pipe(notify({
             message: 'Mindah <%= file.relative %>'
         }));
@@ -163,6 +177,7 @@ function watching() {
 exports.folder = folder;
 exports.js = js;
 exports.css = css;
+exports.assets = parallel(js, css);
 exports.render = nunjucks;
 exports.build = build;
 exports.default = watching;
