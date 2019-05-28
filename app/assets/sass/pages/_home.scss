@@ -7,7 +7,58 @@
     Home Style
 \*------------------------------------*/
 
-.home {
-    color: aqua;
-    font-size: 12px;
+
+/*------------------------------------*\
+    Carousel Styling
+\*------------------------------------*/
+
+.c-home-slider {
+
+    .carousel-inner {
+        clip-path: ellipse(100% 90% at 50% 0%);
+        max-height: 700px;
+
+        .carousel-caption {
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+            left: 10%;
+            top: 25%;
+            z-index: 10;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            text-align: left;
+            max-width: 500px;
+
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        display: block;
+        width: 100vw;
+        height: 650;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0.5) 100%);
+        z-index: 1;
+    }
+
+    h5 {
+        font-weight: 500;
+        font-size: 25px;
+        letter-spacing: 1.5px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 25px;
+        padding-top: 10px;
+    }
+
 }
