@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    Responsive Styling
+\*------------------------------------*/
+
+
+/* Desktop responsive */
+
+@media (min-width: 1200px) {
+    .sticky {
+        position: fixed;
+        top: 1;
+        min-width: 90%;
+        background-color: white;
+        margin: 0 auto;
+        margin-left: 2em;
+    }
+}
+
+/* tablet responsive  */
+
+@media (max-width: 900px) {
+    .sticky {
+        margin-left: 0px;
+        min-width: 85%;
+        margin: 0 auto;
+        margin-left: 1em;
+    }
+}
+
+/* mobile responsive */
+
+@media (max-width: 600px) {
+    .sticky {
+        margin-left: 0px;
+        min-width: 80%;
+        margin: 0 auto;
+        margin-left: 10px;
+    }
+}

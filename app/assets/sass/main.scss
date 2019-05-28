@@ -1,10 +1,25 @@
-// import mixins
-@import "./util/mixins";
+// import utilities
+@import "./util/_mixins";
+@import "./util/_variables";
+@import "./util/_responsive";
 
-// import section
+//import atom components
+@import "./components/_buttons";
+
+//import layout
+@import "./layout/_nav";
+@import "./layout/_carousel";
+
+// import pages section
 @import "./pages/home";
 
 
-.message {
-    @extend %message-shared;
+/*------------------------------------*\
+    Body Style
+\*------------------------------------*/
+
+body {
+    font-family: $font--primary;
+    font-weight: 400;
+    color: $font-color--primary;
 }

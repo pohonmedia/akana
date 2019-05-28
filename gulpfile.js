@@ -10,6 +10,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const uglify = require('gulp-uglify');
+const sourcemaps = require('gulp-sourcemaps');
 
 //asset css
 var bootstrapCSS = './node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -17,7 +18,7 @@ var bootstrapCSS = './node_modules/bootstrap/dist/css/bootstrap.min.css';
 //asset js
 var bootstrapJS = './node_modules/bootstrap/dist/js/bootstrap.min.js';
 var jqueryJS = './node_modules/jquery/dist/jquery.slim.min.js';
-var popperJS = './node_modules/jquery/dist/popper.min.js';
+var popperJS = './node_modules/popper.js/dist/umd/popper.min.js';
 
 //assets dir
 var ASSETS = {
@@ -69,8 +70,10 @@ function css() {
                 })(err);
             }
         }))
+        .pipe(sourcemaps.init())
         .pipe(concat('plugin.min.css'))
         .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(sourcemaps.write())
         .pipe(dest(ASSETS.CSS))
         .pipe(notify({
             message: 'Mindah <%= file.relative %>'
@@ -79,15 +82,7 @@ function css() {
 
 // moving js
 function js() {
-    return src(bootstrapJS)
-        .pipe(plumber({
-            errorHandler: function (err) {
-                notify.onError({
-                    title: "Gulp error in " + err.plugin,
-                    message: err.toString()
-                })(err);
-            }
-        }))
+    return src([jqueryJS, popperJS, bootstrapJS])
         .pipe(concat('plugin.min.js'))
         .pipe(uglify())
         .pipe(dest(ASSETS.JS))

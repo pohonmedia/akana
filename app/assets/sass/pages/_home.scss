@@ -1,8 +1,13 @@
-$font-stack: Helvetica,
-sans-serif;
-$primary-color: #333;
+// import utilities
+@import "./util/mixins";
+@import "./util/variables";
 
-body {
-    font: 100% $font-stack;
-    color: $primary-color;
+
+/*------------------------------------*\
+    Home Style
+\*------------------------------------*/
+
+.home {
+    color: aqua;
+    font-size: 12px;
 }

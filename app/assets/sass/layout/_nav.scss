@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    Navigation Styling
+\*------------------------------------*/
+
+
+/* .navbar-light{
+	background-color: transparent !important;
+} */
+
+.navbar {
+    min-height: 65px;
+    position: absolute;
+    z-index: 20;
+    min-width: 100vw;
+    padding: 20px;
+    // margin-left: 1em;
+    // margin-right: 1em;
+
+}
+
+.nav-item {
+    margin-left: 2em;
+    letter-spacing: 2px;
+    color: $font-color--secondary;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: var(--primary-color);
+}
