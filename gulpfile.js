@@ -146,7 +146,7 @@ function build(cb) {
 
 function watching() {
     // nunjucks()
-    minify()
+    // minify()
 
     browserSync.init({
         server: {
@@ -155,7 +155,7 @@ function watching() {
         startPath: './app/index.html',
         port: 3000
     });
-    watch('./assets/sass/**/*.scss', minify).on('change', browserSync.reload);
+    watch('./app/assets/sass/**/*.scss', minify).on('change', browserSync.reload);
     watch(COMPILE.SRC, nunjucks).on('change', browserSync.reload);
     watch(COMPILE.TMP, nunjucks).on('change', browserSync.reload);
 };
