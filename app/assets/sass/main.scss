@@ -1,0 +1,10 @@
+// import mixins
+@import "./util/mixins";
+
+// import section
+@import "./pages/home";
+
+
+.message {
+    @extend %message-shared;
+}

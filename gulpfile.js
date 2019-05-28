@@ -15,7 +15,7 @@ var ASSETS = {
     CSS: './app/assets/css',
     JS: './app/assets/js',
     IMG: './app/assets/img',
-    SASS: './app/assets/sass',
+    SASS: './app/assets/sass/main.scss',
     TESTING: './app/sandbox/_test'
 }
 
@@ -155,7 +155,7 @@ function watching() {
         startPath: './app/index.html',
         port: 3000
     });
-    watch('./dst/sass/*.scss', minify).on('change', browserSync.reload);
+    watch('./assets/sass/**/*.scss', minify).on('change', browserSync.reload);
     watch(COMPILE.SRC, nunjucks).on('change', browserSync.reload);
     watch(COMPILE.TMP, nunjucks).on('change', browserSync.reload);
 };
