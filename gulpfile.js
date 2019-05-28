@@ -100,12 +100,7 @@ function nunjucks() {
         .pipe(notify({
             message: 'Render berhasil bos'
         }));
-<<<<<<< HEAD
-}
-
-=======
 };
->>>>>>> 7536ea5b1d4d092b455739bda94b471bd80f976e
 
 //minify compile
 function minify() {
@@ -149,19 +144,9 @@ function build(cb) {
     cb();
 };
 
-<<<<<<< HEAD
-function build() {
-    nunjucks();
-    minify();
-}
-
-function watching() {
-    build();
-=======
 function watching() {
     // nunjucks()
     // minify()
->>>>>>> 7536ea5b1d4d092b455739bda94b471bd80f976e
 
     browserSync.init({
         server: {
