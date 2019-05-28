@@ -4,19 +4,16 @@
 
 
 /*------------------------------------*\
-    Home Style
-\*------------------------------------*/
-
-
-/*------------------------------------*\
     Carousel Styling
 \*------------------------------------*/
 
 .c-home-slider {
+    z-index: 20;
+    position: relative;
 
     .carousel-inner {
         clip-path: ellipse(100% 90% at 50% 0%);
-        max-height: 700px;
+        max-height: 650px;
 
         .carousel-caption {
             position: absolute;
@@ -38,7 +35,7 @@
         position: absolute;
         display: block;
         width: 100vw;
-        height: 650;
+        // height: 650;
         top: 0;
         left: 0;
         right: 0;
@@ -62,4 +59,49 @@
         padding-bottom: 10px;
     }
 
+}
+
+
+/*------------------------------------*\
+    Our Service Styling
+\*------------------------------------*/
+
+.c-service {
+    z-index: 10;
+    height: 600px;
+    margin-top: -150px;
+    padding-top: 150px;
+    position: absolute;
+
+    .o-title {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 25px;
+    }
+
+    .bg {
+        background-image: url("../img/bg--3.jpg");
+        opacity: 0.1;
+        background-size: cover;
+        position: absolute;
+        display: block;
+        width: 100vw;
+        height: 600px;
+        // height: 650;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        // background: rgba(10, 10, 10, 0.5);
+        z-index: 1;
+    }
+}
+
+.bg {
+    background-image: url(https://unsplash.it/1500/750?image=1041);
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
 }
