@@ -94,14 +94,6 @@ function js() {
 //compile nunjucks
 function nunjucks() {
     return src(COMPILE.SRC)
-        .pipe(plumber({
-            errorHandler: function (err) {
-                notify.onError({
-                    title: "Gulp error in " + err.plugin,
-                    message: err.toString()
-                })(err);
-            }
-        }))
         .pipe(nunjucksRender({
             path: [COMPILE.TMP]
         }))
@@ -114,14 +106,7 @@ function nunjucks() {
 //minify compile
 function minify() {
     return src(ASSETS.SASS)
-        .pipe(plumber({
-            errorHandler: function (err) {
-                notify.onError({
-                    title: "Gulp error in " + err.plugin,
-                    message: err.toString()
-                })(err);
-            }
-        }))
+        .pipe(plumber())
         .pipe(sass({
             errorLogToConsole: true
         }))
@@ -139,14 +124,7 @@ function minify() {
 function build(cb) {
     nunjucks()
     minify()
-        .pipe(plumber({
-            errorHandler: function (err) {
-                notify.onError({
-                    title: "Gulp error in " + err.plugin,
-                    message: err.toString()
-                })(err);
-            }
-        }))
+        .pipe(plumber())
         .pipe(notify({
             message: 'Build berhasil bos'
         }));
@@ -166,7 +144,7 @@ function watching() {
     });
     watch('./app/assets/sass/**/*.scss', minify).on('change', browserSync.reload);
     watch(COMPILE.SRC, nunjucks).on('change', browserSync.reload);
-    watch(COMPILE.TMP, nunjucks).on('change', browserSync.reload);
+    // watch(COMPILE.TMP, nunjucks).on('change', browserSync.reload);
 };
 
 exports.folder = folder;
