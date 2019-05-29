@@ -14,11 +14,13 @@ const sourcemaps = require('gulp-sourcemaps');
 
 //asset css
 var bootstrapCSS = './node_modules/bootstrap/dist/css/bootstrap.min.css';
+var swiperCSS = './node_modules/swiper/dist/css/swiper.min.css';
 
 //asset js
 var bootstrapJS = './node_modules/bootstrap/dist/js/bootstrap.min.js';
 var jqueryJS = './node_modules/jquery/dist/jquery.slim.min.js';
 var popperJS = './node_modules/popper.js/dist/umd/popper.min.js';
+var swiperJS = './node_modules/swiper/dist/js/swiper.min.js';
 
 //assets dir
 var ASSETS = {
@@ -55,18 +57,18 @@ function folder() {
         .pipe(dest(ASSETS.JS))
         .pipe(dest(ASSETS.IMG))
         .pipe(notify({
-            message: 'Folder wis dadi'
+            "message": 'Folder wis dadi'
         }));
 };
 
 // moving css
 function css() {
-    return src(bootstrapCSS)
+    return src([bootstrapCSS, swiperCSS])
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({
                     title: "Gulp error in " + err.plugin,
-                    message: err.toString()
+                    "message": err.toString()
                 })(err);
             }
         }))
@@ -76,18 +78,18 @@ function css() {
         .pipe(sourcemaps.write())
         .pipe(dest(ASSETS.CSS))
         .pipe(notify({
-            message: 'Mindah <%= file.relative %>'
+            "message": 'Render asset <%= file.relative %> berhasil'
         }));
 };
 
 // moving js
 function js() {
-    return src([jqueryJS, popperJS, bootstrapJS])
+    return src([jqueryJS, popperJS, bootstrapJS, swiperJS])
         .pipe(concat('plugin.min.js'))
         .pipe(uglify())
         .pipe(dest(ASSETS.JS))
         .pipe(notify({
-            message: 'Mindah <%= file.relative %>'
+            "message": 'Render asset <%= file.relative %> berhasil'
         }));
 };
 
@@ -99,7 +101,7 @@ function nunjucks() {
         }))
         .pipe(dest(COMPILE.DST))
         .pipe(notify({
-            message: 'Render berhasil bos'
+            "message": 'Render berhasil bos'
         }));
 };
 
@@ -118,7 +120,7 @@ function minify() {
         .pipe(dest(ASSETS.CSS))
         .pipe(browserSync.stream({ once: true }))
         .pipe(notify({
-            message: 'Minify berhasil bos'
+            "message": 'Minify berhasil bos'
         }));
 };
 
@@ -127,7 +129,7 @@ function build(cb) {
     minify()
         .pipe(plumber())
         .pipe(notify({
-            message: 'Build berhasil bos'
+            "message": 'Build berhasil bos'
         }));
     cb();
 };
