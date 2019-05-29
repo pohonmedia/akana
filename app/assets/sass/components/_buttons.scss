@@ -8,14 +8,14 @@
 .btn--primary {
     min-width: 150px;
     min-height: 40px;
-    border-radius: 0px 15px 0px 15px;
+    border-radius: 5px;
     background-color: $color--primary;
     border-color: $color--primary;
     color: $font-color--secondary;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
-    box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+    // box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
 
     &:hover {
         background-color: $color-primary--darken;
