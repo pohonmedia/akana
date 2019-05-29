@@ -116,6 +116,7 @@ function minify() {
         }))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(dest(ASSETS.CSS))
+        .pipe(browserSync.stream({ once: true }))
         .pipe(notify({
             message: 'Minify berhasil bos'
         }));
@@ -142,7 +143,7 @@ function watching() {
         startPath: './app/index.html',
         port: 3000
     });
-    watch('./app/assets/sass/**/*.scss', minify).on('change', browserSync.reload);
+    watch('./app/assets/sass/**/*.scss', minify);
     watch(COMPILE.SRC, nunjucks).on('change', browserSync.reload);
     // watch(COMPILE.TMP, nunjucks).on('change', browserSync.reload);
 };
