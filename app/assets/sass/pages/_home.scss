@@ -1,6 +1,6 @@
 // import utilities
-@import "./util/mixins";
-@import "./util/variables";
+@import "../util/mixins";
+@import "../util/variables";
 
 
 /*------------------------------------*\
@@ -13,14 +13,13 @@
 
     .carousel-inner {
         clip-path: ellipse(100% 90% at 50% 0%);
-        max-height: 650px;
+        max-height: 700px;
 
         .carousel-caption {
             position: absolute;
             right: 0;
-            bottom: 20px;
+            top: 20%;
             left: 10%;
-            top: 25%;
             z-index: 10;
             padding-top: 20px;
             padding-bottom: 20px;
@@ -67,26 +66,52 @@
 \*------------------------------------*/
 
 .c-service {
+    // background-image: url(../img/bg--4.jpg);
+    // background-size: cover;
+    // background: rgba(10, 10, 10, 0.1);
     z-index: 10;
-    height: 600px;
+    height: 500px;
     margin-top: -150px;
+    margin-bottom: 100px;
     padding-top: 150px;
     position: absolute;
+
+    // .overlay {
+    //     position: absolute;
+    //     display: block;
+    //     width: 100vw;
+    //     // height: 650;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     background: rgba(10, 10, 10, 0.5);
+    //     z-index: 1;
+    // }
+
+    .row {
+        z-index: 100;
+        // background-color: red;
+        position: absolute
+    }
 
     .o-title {
         text-transform: uppercase;
         letter-spacing: 1px;
         font-size: 25px;
+        padding-bottom: 50px;
     }
 
     .bg {
-        background-image: url("../img/bg--3.jpg");
+        background-image: url("../img/bg--4.jpg");
         opacity: 0.1;
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
         position: absolute;
         display: block;
         width: 100vw;
-        height: 600px;
+        height: auto;
         // height: 650;
         top: 0;
         left: 0;
@@ -95,13 +120,52 @@
         // background: rgba(10, 10, 10, 0.5);
         z-index: 1;
     }
-}
 
-.bg {
-    background-image: url(https://unsplash.it/1500/750?image=1041);
-    background-size: cover;
-    height: 500px;
-    width: 100%;
-    position: absolute;
-    z-index: 0;
+    .c-card {
+        border-radius: 10px;
+        border: 0px;
+        background: #fff;
+        filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.05));
+
+        i {
+            font-size: 2.5em;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 50%;
+            background-color: $color--primary;
+            color: $font-color--secondary !important;
+        }
+
+        .card-title {
+            text-transform: capitalize;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .card-text {
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            word-break: break-all;
+            padding: 10px;
+            line-height: 20px;
+        }
+
+        .btn-link {
+            letter-spacing: 2px;
+            font-size: 15px;
+            text-transform: uppercase;
+
+            &:hover {
+                text-decoration: none;
+                color: $color--primary;
+            }
+        }
+
+        &:hover {
+            transition: 0.2s ease-in;
+            filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.2));
+            transform: translateY(-2px);
+        }
+
+    }
 }
