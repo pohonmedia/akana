@@ -1,15 +1,3 @@
-// import utilities
-@import "./util/_mixins";
-@import "./util/_variables";
-@import "./util/_responsive";
-
-//import atom components
-@import "./components/_buttons";
-
-//import layout
-@import "./layout/_nav";
-@import "./layout/_carousel";
-
 // import pages section
 @import "./pages/home";
 
