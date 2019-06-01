@@ -14,7 +14,7 @@ Install  [yarn](https://yarnpkg.com/en/) package manager to use development comm
 
 ``` bash
 # install dependencies
-$ yarn init
+$ yarn
 
 # check dependencies
 $ yarn check
