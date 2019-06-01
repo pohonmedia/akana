@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    Product Carousel 
+\*------------------------------------*/
+
+.c-product-carousel {
+
+    text-align: left;
+
+    .swiper-container {
+        // height: 300px;
+        left: 100;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .swiper-slide {
+        align-items: center;
+        display: flex;
+        font-size: 18px;
+        justify-content: center;
+        padding-bottom: 30px;
+        text-align: center;
+        // background: #fff;
+        /* Center slide text vertically */
+        width: 60%;
+
+        .col {
+            padding: 20px;
+        }
+    }
+
+}

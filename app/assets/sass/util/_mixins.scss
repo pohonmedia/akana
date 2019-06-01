@@ -1,6 +1,41 @@
-/* This CSS will print because %message-shared is extended. */
-%message-shared {
-    border: 1px solid #ccc;
-    padding: 10px;
-    color: #333;
+/*------------------------------------*\
+    Homepage Mixins
+\*------------------------------------*/
+
+@mixin content-pkg($bg) {
+    background-image: $bg;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding: 0;
+    // margin-bottom: 50px;
+    min-height: 400px;
+
+    .c-content {
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        min-height: 400px;
+        padding-top: 20px;
+    }
+
+    .c-description {
+        // max-width: 500px;
+
+        padding: 50px;
+
+        // padding-right: 50px;
+        p {
+            color: $font-color--primary;
+            font-size: 15px;
+            font-weight: 400;
+            padding: 10px 0px;
+            word-break: break-all;
+        }
+    }
+
+    h2 {
+        color: $font-color--primary;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
 }

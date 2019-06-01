@@ -1,10 +1,13 @@
-// import mixins
-@import "./util/mixins";
-
-// import section
+// import pages section
 @import "./pages/home";
 
 
-.message {
-    @extend %message-shared;
+/*------------------------------------*\
+    Body Style
+\*------------------------------------*/
+
+body {
+    font-family: $font--primary;
+    font-weight: 400;
+    color: $font-color--primary;
 }

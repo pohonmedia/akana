@@ -1,0 +1,153 @@
+@import "../util/variables";
+
+/*------------------------------------*\
+    Card Product styling
+\*------------------------------------*/
+
+.c-card-product {
+    background: #fff;
+    border: 0;
+    border-radius: 15px;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, .05));
+    min-width: 250px;
+    max-height: 400px;
+    text-align: left;
+    // border: 1px solid #ecf0f1;
+
+    .card-img-top {
+        border-radius: 15px;
+        max-height: 250px;
+    }
+
+    .card-body {
+        color: #212121;
+
+        h5 {
+            text-transform: capitalize;
+        }
+    }
+
+    .c-card-date {
+        display: block;
+        font-size: 15px;
+    }
+
+    .c-card-dest {
+        display: block;
+        font-size: 15px;
+    }
+
+    &:hover {
+        filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.16));
+        transform: translateY(-2px);
+        transition: 0.2s ease-in;
+    }
+}
+
+/*------------------------------------*\
+    Card Destination styling
+\*------------------------------------*/
+
+
+.c-card-destination {
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    img {
+        height: 150px !important;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card-img-overlay {
+        background-color: rgba(0, 0, 0, 0.4);
+        height: 100%;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .card-title {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .card-text {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .btn-link {
+        border: 2px solid $color--primary;
+        border-radius: 30px;
+        color: $font-color--secondary;
+        font-weight: 500;
+        text-decoration: none;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        font-size: 12px;
+    }
+
+    &:hover {
+        filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.16));
+        transform: translateY(-2px);
+        transition: 0.2s ease-in;
+
+        .card-img-overlay {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-link {
+            border: 2px solid $color--primary;
+            background-color: $color--primary;
+            border-radius: 30px;
+            color: $font-color--secondary;
+            font-weight: 500;
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            font-size: 12px;
+        }
+    }
+}
+
+/*------------------------------------*\
+    Card Image styling
+\*------------------------------------*/
+
+
+.c-card-img {
+    max-height: 350px;
+    border-radius: 15px;
+    border: 0px;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, .05));
+
+    .card-img-top {
+        min-height: 350px;
+        border-radius: 10px;
+        z-index: 0;
+        object-fit: cover;
+    }
+
+    .o-title {
+        z-index: 1;
+        padding: 50px 25px;
+        margin-top: -150px;
+        font-size: 1.3em;
+        font-weight: 500;
+        color: #fafafa;
+    }
+
+    .btn--primary {
+        z-index: 1;
+        margin-top: -40px;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    &:hover {
+        filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.16));
+        transform: translateY(-2px);
+        transition: 0.2s ease-in;
+    }
+}
