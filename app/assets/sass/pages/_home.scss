@@ -388,7 +388,40 @@
     }
 }
 
+
+.c-cta {
+    z-index: 1;
+    position: absolute;
+    margin-top: -50px;
+    min-width: 100%;
+
+    .card {
+        min-width: 80%;
+        min-height: 150px;
+        border: 0;
+        border-radius: 20px;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.16);
+        padding: 25px;
+    }
+
+    h5 {
+        text-transform: capitalize;
+        font-size: 1.5em;
+    }
+
+    small {
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+
+    p {
+        font-size: 20px;
+        padding-top: 5px;
+    }
+}
+
 .c-footer {
+    margin-top: 80px !important;
     min-height: 300px;
 
     p {
