@@ -45,7 +45,7 @@
     border-radius: 5px;
     background-color: $color--secondary;
     border-color: $color--secondary;
-    color: $font-color--primary;
+    color: $color--primary;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
@@ -54,7 +54,7 @@
     &:hover {
         background-color: $color--secondary;
         border-color: $color--secondary;
-        color: $font-color--primary;
+        color: $color--primary;
         box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
         transform: translateY(-1px);
     }
@@ -62,7 +62,7 @@
     &:active {
         background-color: $color--secondary !important;
         border-color: $color--secondary !important;
-        color: $font-color--primary !important;
+        color: $color--primary !important;
         box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
         transform: translateY(-1px);
     }
@@ -70,7 +70,7 @@
     &:focus {
         background-color: $color--secondary !important;
         border-color: $color--secondary !important;
-        color: $font-color--primary !important;
+        color: $color--primary !important;
         box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27) !important;
     }
 }
