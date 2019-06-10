@@ -1,7 +1,169 @@
+// import utilities
+@import "../util/variables";
+
 /*------------------------------------*\
-    Responsive Styling
+    Mobile responsive 
 \*------------------------------------*/
 
+@media only screen and (max-width:380px) {
+
+    /* Global responsive */
+
+    .navbar {
+        max-height: 50px;
+        padding: 0px 15px !important;
+        background-color: #ffffff;
+
+        img {
+            width: 45px;
+        }
+
+        .navbar-toggler {
+            font-size: 1rem;
+            padding: .30rem;
+            background-color: $color--primary;
+        }
+    }
+
+
+    /* About us responsive */
+
+    .c-home-slider {
+        padding-top: 50px;
+
+        .carousel-inner {
+            clip-path: none !important;
+        }
+    }
+
+
+    .c-service {
+        z-index: 0 !important;
+        height: unset !important;
+        margin: 0 !important;
+        position: unset !important;
+        padding-top: 50px !important;
+
+        .o-title {
+            padding-bottom: 25px !important;
+            font-weight: bold;
+            font-size: 20px !important;
+            letter-spacing: 2px;
+        }
+
+        .c-card {
+            margin-bottom: 25px;
+            filter: drop-shadow(0 20px 20px rgba(0, 0, 0, .2)) !important;
+
+            .card-title {
+                margin: 5px !important;
+            }
+        }
+    }
+
+    .c-tour-pkg {
+        h2 {
+            font-size: 25px !important;
+        }
+    }
+
+    .c-about {
+        .c-img {
+            .img-top {
+                left: 0 !important;
+            }
+        }
+    }
+
+    .c-destination {
+        &:before {
+            background: none !important;
+        }
+
+        .c-content {
+            background-color: $color--primary !important;
+            padding: 20px !important;
+
+            h2 {
+                font-size: 25px !important;
+            }
+
+            p {
+                font-size: 15px !important;
+            }
+
+            a {
+                margin-bottom: 20px;
+                min-width: 100%;
+            }
+
+            .c-card-destination {
+                p {
+                    font-size: 12px !important;
+                }
+            }
+
+            .card-img {
+                &-overlay {
+                    padding: 20px !important;
+                }
+            }
+        }
+    }
+
+    .c-mice-pkg {
+        h2 {
+            font-size: 25px !important;
+        }
+
+    }
+
+    .c-recent-works {
+        .c-wording {
+            padding: 25px !important;
+        }
+
+        p {
+            font-size: 12px !important;
+        }
+    }
+
+    .c-about {
+        .c-img {
+            padding: 0 !important;
+
+            .img-top {
+                margin-top: -20px !important;
+            }
+        }
+
+        .c-wording {
+            padding: 20px !important;
+            margin-bottom: 0px !important;
+        }
+
+        h1 {
+            font-size: 20px !important;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        p {
+            font-size: 12px !important;
+            line-height: 20px !important;
+            opacity: 0.9 !important;
+        }
+    }
+
+    .c-cta {
+        display: none !important;
+    }
+
+    .c-footer {
+        display: none !important;
+    }
+
+}
 
 /* Desktop responsive */
 
