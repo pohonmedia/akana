@@ -1,4 +1,5 @@
 // import utilities
+@import "../util/mixins";
 @import "../util/variables";
 
 
@@ -18,10 +19,9 @@
 \*------------------------------------*/
 
 .c-header-about {
+    height: 80% !important;
     padding: 0 !important;
     background-color: #ffffff;
-
-
 }
 
 .c-header--left {
@@ -46,7 +46,7 @@
 }
 
 .c-header--right {
-    left: -50;
+    left: -100;
 
     h1 {
         text-transform: uppercase;
@@ -126,4 +126,50 @@
     background-color: $color--primary;
     box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
     border-radius: 10px;
+}
+
+/*------------------------------------*\
+    Business Travel Styling
+\*------------------------------------*/
+
+.c-travel-about {
+    min-height: 450px !important;
+    @include content-pkg(url("../img/bg--2.jpg"));
+
+    .embed-responsive {
+        width: 350px;
+        height: 350px;
+        border-radius: 15px;
+    }
+
+    .c-content {
+        padding-top: unset;
+        min-height: 450px !important;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 20px 0px;
+    }
+
+    h2 {
+        font-size: 15px;
+        color: $color--primary;
+        letter-spacing: 2px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        max-width: 450px;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
 }
