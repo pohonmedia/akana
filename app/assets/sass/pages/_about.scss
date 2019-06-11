@@ -6,5 +6,85 @@
 
 
 /*------------------------------------*\
+    Navbar Styling
+\*------------------------------------*/
+
+.navbar {
+    position: unset !important;
+}
+
+/*------------------------------------*\
     Header Styling
 \*------------------------------------*/
+
+.c-header-about {
+    padding: 0 !important;
+    background-color: #ffffff;
+
+
+}
+
+.c-header--left {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        /* bottom: 200; */
+        left: 1;
+        height: 100%;
+        min-width: 800px;
+        background: url("../img/svg--3.svg") no-repeat right;
+    }
+
+    background-image: url("../img/bg--2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding: 0;
+
+    // @include content-pkg(url("../img/bg--2.jpg"));
+}
+
+.c-header--right {
+    left: -50;
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 30px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        max-width: 450px;
+        word-break: break-all;
+        margin-bottom: 20px;
+    }
+
+    .nav {
+        &-item {
+            margin-left: 0.5em !important;
+            font-size: 20px;
+        }
+
+        &-link {
+            color: $color--primary !important;
+        }
+    }
+}
+
+/*------------------------------------*\
+    Partner Styling
+\*------------------------------------*/
+
+.c-partner-about {
+    margin-bottom: 25px;
+}
+
+/*------------------------------------*\
+    Service Styling
+\*------------------------------------*/
+.c-service-about {}
