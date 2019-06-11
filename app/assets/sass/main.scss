@@ -1,5 +1,13 @@
 // import pages section
 @import "./pages/home";
+@import "./pages/about";
+
+//import components 
+@import "./components/buttons";
+@import "./components/nav";
+
+// import utilities
+@import "./util/variables";
 
 
 /*------------------------------------*\
