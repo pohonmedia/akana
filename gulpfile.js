@@ -145,7 +145,7 @@ function watching() {
                 extensions: ['html']
             }
         },
-        startPath: './app/index.html',
+        startPath: './app/about-us',
         port: 3000
     });
     watch('./app/assets/sass/**/*.scss', minify);
