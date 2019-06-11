@@ -13,22 +13,32 @@
     z-index: 100;
     min-width: 100vw;
     padding: 20px;
+    background-color: $color--secondary;
     // margin-left: 1em;
     // margin-right: 1em;
 
 }
 
-.nav-item {
-    margin-left: 2em;
-    letter-spacing: 2px;
-    color: $font-color--secondary;
+.nav {
+    &-item {
+        margin-left: 2em;
+        letter-spacing: 2px;
+        color: $color--primary !important;
+    }
+
+    &-link {
+        text-transform: uppercase;
+        font-weight: 500;
+
+    }
 }
 
-.nav-link {
-    text-transform: uppercase;
-    font-weight: 500;
+.navbar-dark .navbar-nav .active>.nav-link {
+    color: $color--primary !important;
+    opacity: 1;
 }
 
-.navbar-light .navbar-nav .active>.nav-link {
-    color: var(--primary-color);
+.navbar-dark .navbar-nav .nav-link {
+    color: $color-primary--darken !important;
+    opacity: 0.5;
 }
