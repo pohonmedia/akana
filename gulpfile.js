@@ -140,7 +140,10 @@ function watching() {
 
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./",
+            serveStaticOptions: {
+                extensions: ['html']
+            }
         },
         startPath: './app/index.html',
         port: 3000
