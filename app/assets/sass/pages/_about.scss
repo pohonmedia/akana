@@ -87,4 +87,43 @@
 /*------------------------------------*\
     Service Styling
 \*------------------------------------*/
-.c-service-about {}
+.c-service-about {
+
+    // margin=: 80px;
+
+    .media {
+        padding: 10px 20px;
+
+        &-body {
+            padding: 20px 20px 0px 20px;
+        }
+    }
+
+    h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+
+    h2 {
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+    }
+
+    p {
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        // max-width: 90%;
+    }
+}
+
+.o-service-icon {
+    padding: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: $color--primary;
+    box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+    border-radius: 10px;
+}
