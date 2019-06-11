@@ -173,3 +173,35 @@
         margin-bottom: 20px;
     }
 }
+
+/*------------------------------------*\
+    Tour Categories Styling
+\*------------------------------------*/
+
+.c-travel-categories {
+    min-height: 150px;
+
+    h2 {
+        font-size: 25px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 13px;
+        word-break: break-all;
+    }
+
+    .c-slider {
+        margin-top: 20px;
+    }
+
+    .swiper-slide {
+        .col {
+            padding: 10px;
+        }
+
+    }
+}
