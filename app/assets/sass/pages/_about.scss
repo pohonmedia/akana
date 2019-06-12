@@ -1,0 +1,506 @@
+// import utilities
+@import "../util/mixins";
+@import "../util/variables";
+
+
+//import components 
+
+
+/*------------------------------------*\
+    Navbar Styling
+\*------------------------------------*/
+
+.navbar {
+    position: unset !important;
+}
+
+/*------------------------------------*\
+    Header Styling
+\*------------------------------------*/
+
+.c-header-about {
+    height: 80% !important;
+    padding: 0 !important;
+    background-color: #ffffff;
+}
+
+.c-header--left {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        /* bottom: 200; */
+        left: 1;
+        height: 100%;
+        min-width: 800px;
+        background: url("../img/svg--3.svg") no-repeat right;
+    }
+
+    background-image: url("../img/bg--2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding: 0;
+
+    // @include content-pkg(url("../img/bg--2.jpg"));
+}
+
+.c-header--right {
+    left: -100;
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 30px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        max-width: 450px;
+        word-break: break-all;
+        margin-bottom: 20px;
+    }
+
+    .nav {
+        &-item {
+            margin-left: 0.5em !important;
+            font-size: 20px;
+        }
+
+        &-link {
+            color: $color--primary !important;
+        }
+    }
+}
+
+/*------------------------------------*\
+    Partner Styling
+\*------------------------------------*/
+
+.c-partner-about {
+    margin-bottom: 25px;
+}
+
+/*------------------------------------*\
+    Service Styling
+\*------------------------------------*/
+.c-service-about {
+
+    // margin=: 80px;
+
+    .media {
+        padding: 10px 20px;
+
+        &-body {
+            padding: 20px 20px 0px 20px;
+        }
+    }
+
+    h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+
+    h2 {
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+    }
+
+    p {
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        // max-width: 90%;
+    }
+}
+
+.o-service-icon {
+    padding: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: $color--primary;
+    box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+    border-radius: 10px;
+}
+
+/*------------------------------------*\
+    Business Travel Styling
+\*------------------------------------*/
+
+.c-travel-about {
+    min-height: 450px !important;
+    @include content-pkg(url("../img/bg--2.jpg"));
+
+    .embed-responsive {
+        width: 350px;
+        height: 350px;
+        border-radius: 15px;
+    }
+
+    .c-content {
+        padding-top: unset;
+        min-height: 450px !important;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 20px 0px;
+    }
+
+    h2 {
+        font-size: 15px;
+        color: $color--primary;
+        letter-spacing: 2px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        max-width: 450px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/*------------------------------------*\
+    Tour Categories Styling
+\*------------------------------------*/
+
+.c-travel-categories {
+    min-height: 150px;
+
+    h2 {
+        font-size: 25px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 13px;
+        word-break: break-all;
+    }
+
+    .c-slider {
+        margin-top: 20px;
+    }
+
+    .swiper-slide {
+        .col {
+            padding: 10px;
+        }
+
+    }
+}
+
+/*------------------------------------*\
+    Business Event Styling
+\*------------------------------------*/
+
+.c-mice-about {
+    min-height: 450px !important;
+    @include content-pkg(url("../img/bg--8.jpg"));
+
+    .embed-responsive {
+        width: 350px;
+        height: 350px;
+        border-radius: 15px;
+    }
+
+    .c-content {
+        padding-top: unset;
+        min-height: 450px !important;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 20px 0px;
+    }
+
+    h2 {
+        font-size: 15px;
+        color: $color--primary;
+        letter-spacing: 2px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        max-width: 450px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/*------------------------------------*\
+    Event Services Styling
+\*------------------------------------*/
+
+.c-event-service {
+    min-height: 400px;
+
+    .o-service-icon {
+        padding: 20px;
+        margin: 20px 0px;
+        width: 150px;
+        height: 150px;
+        background-color: #ffffff;
+        box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+        border-radius: 10px;
+    }
+
+    img {
+        height: 60px;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 500;
+        padding-top: 10px;
+        text-transform: capitalize;
+    }
+
+    .c-description {
+        h2 {
+            font-size: 25px;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+        }
+
+        p {
+            max-width: 450px;
+            font-size: 15px;
+            font-weight: 400;
+            word-break: keep-all;
+            line-height: 25px;
+            text-transform: none;
+        }
+    }
+
+
+
+
+}
+
+/*------------------------------------*\
+    Our Team Styling
+\*------------------------------------*/
+
+.c-our-team {
+    min-height: 350px;
+    background-color: $color--primary;
+
+    .c-description {
+        padding: 20px 0px;
+
+        h2 {
+            font-size: 30px;
+            color: $color--secondary;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 15px;
+            color: $color--secondary;
+            letter-spacing: 1px;
+        }
+    }
+
+    .c-profile {
+        background-color: transparent;
+        border: none;
+
+        h6 {
+            color: $color--secondary;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+        }
+
+        p {
+            font-size: 15px;
+            color: $color--secondary;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        img {
+            width: 150px;
+        }
+    }
+}
+
+/*------------------------------------*\
+    Our Client Styling
+\*------------------------------------*/
+
+.c-our-client {
+    padding: 20px 0px;
+    min-height: 400px;
+
+    .c-description {
+        padding: 20px 0px;
+
+        h2 {
+            font-size: 30px;
+            color: $color--primary;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 15px;
+            color: $color--primary;
+            letter-spacing: 2px;
+            max-width: 500px;
+        }
+    }
+
+    img {
+        padding: 20px 0px;
+        height: 100px;
+    }
+}
+
+/*------------------------------------*\
+   Recent Works Styling
+\*------------------------------------*/
+
+.c-recent-works {
+    .c-wording {
+        background-color: $color--primary;
+        color: $font-color--secondary;
+        padding: 50px;
+        // min-height: 300px;
+        text-align: center;
+
+        h5 {
+            font-size: 25px;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        p {
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+    }
+
+    .c-img {
+
+        .card {
+            min-height: 300px;
+            border: 0;
+            border-radius: 0;
+
+            &-img {
+                border-radius: 0
+            }
+
+            &-img-overlay {
+                position: absolute;
+                display: block;
+                // width: 100vw;
+                // height: 650;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(10, 10, 10, 0.3);
+                z-index: 1;
+
+                &:hover {
+                    background: rgba(10, 10, 10, 0.1);
+                }
+            }
+        }
+
+
+    }
+
+
+    img {
+        min-height: 300px;
+        object-fit: cover;
+    }
+
+    .c-content {
+        bottom: 0;
+        position: absolute;
+        text-transform: capitalize;
+
+        h5 {
+            margin-bottom: 0;
+        }
+
+        a {
+            padding-left: 0;
+            color: $color--primary;
+        }
+    }
+}
+
+/*------------------------------------*\
+    CTA Styling
+\*------------------------------------*/
+
+.c-cta-about {
+    min-height: 300px !important;
+    @include content-pkg(url("../img/bg--6.jpg"));
+
+    .c-content {
+        padding-top: unset;
+        min-height: 300px !important;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .card {
+        min-height: 150px;
+        min-width: 80%;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+        background-color: $color--primary;
+        color: $font-color--secondary;
+
+        &-body {
+            padding: 20px;
+        }
+    }
+
+    h6 {
+        font-size: 30px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        max-width: 400px;
+        padding: 20px;
+
+    }
+}
+
+.c-footer {
+    min-height: 300px !important;
+    margin-top: unset !important;
+}
