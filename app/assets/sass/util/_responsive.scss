@@ -29,10 +29,14 @@
     /* About us responsive */
 
     .c-home-slider {
-        padding-top: 50px;
+        // padding-top: 50px;
 
         .carousel-inner {
             clip-path: none !important;
+        }
+
+        .carousel-indicators {
+            bottom: 0;
         }
     }
 
