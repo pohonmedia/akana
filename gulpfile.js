@@ -140,9 +140,12 @@ function watching() {
 
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./",
+            serveStaticOptions: {
+                extensions: ['html']
+            }
         },
-        startPath: './app/index.html',
+        startPath: './app/about-us',
         port: 3000
     });
     watch('./app/assets/sass/**/*.scss', minify);
