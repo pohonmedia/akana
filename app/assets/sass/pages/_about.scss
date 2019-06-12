@@ -354,6 +354,7 @@
 /*------------------------------------*\
     Our Client Styling
 \*------------------------------------*/
+
 .c-our-client {
     padding: 20px 0px;
     min-height: 400px;
@@ -380,4 +381,126 @@
         padding: 20px 0px;
         height: 100px;
     }
+}
+
+/*------------------------------------*\
+   Recent Works Styling
+\*------------------------------------*/
+
+.c-recent-works {
+    .c-wording {
+        background-color: $color--primary;
+        color: $font-color--secondary;
+        padding: 50px;
+        // min-height: 300px;
+        text-align: center;
+
+        h5 {
+            font-size: 25px;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        p {
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+    }
+
+    .c-img {
+
+        .card {
+            min-height: 300px;
+            border: 0;
+            border-radius: 0;
+
+            &-img {
+                border-radius: 0
+            }
+
+            &-img-overlay {
+                position: absolute;
+                display: block;
+                // width: 100vw;
+                // height: 650;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(10, 10, 10, 0.3);
+                z-index: 1;
+
+                &:hover {
+                    background: rgba(10, 10, 10, 0.1);
+                }
+            }
+        }
+
+
+    }
+
+
+    img {
+        min-height: 300px;
+        object-fit: cover;
+    }
+
+    .c-content {
+        bottom: 0;
+        position: absolute;
+        text-transform: capitalize;
+
+        h5 {
+            margin-bottom: 0;
+        }
+
+        a {
+            padding-left: 0;
+            color: $color--primary;
+        }
+    }
+}
+
+/*------------------------------------*\
+    CTA Styling
+\*------------------------------------*/
+
+.c-cta-about {
+    min-height: 300px !important;
+    @include content-pkg(url("../img/bg--6.jpg"));
+
+    .c-content {
+        padding-top: unset;
+        min-height: 300px !important;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .card {
+        min-height: 150px;
+        min-width: 80%;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+        background-color: $color--primary;
+        color: $font-color--secondary;
+
+        &-body {
+            padding: 20px;
+        }
+    }
+
+    h6 {
+        font-size: 30px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        max-width: 400px;
+        padding: 20px;
+
+    }
+}
+
+.c-footer {
+    min-height: 300px !important;
+    margin-top: unset !important;
 }
