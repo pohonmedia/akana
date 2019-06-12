@@ -305,6 +305,7 @@
 /*------------------------------------*\
     Our Team Styling
 \*------------------------------------*/
+
 .c-our-team {
     min-height: 350px;
     background-color: $color--primary;
@@ -347,5 +348,36 @@
         img {
             width: 150px;
         }
+    }
+}
+
+/*------------------------------------*\
+    Our Client Styling
+\*------------------------------------*/
+.c-our-client {
+    padding: 20px 0px;
+    min-height: 400px;
+
+    .c-description {
+        padding: 20px 0px;
+
+        h2 {
+            font-size: 30px;
+            color: $color--primary;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 15px;
+            color: $color--primary;
+            letter-spacing: 2px;
+            max-width: 500px;
+        }
+    }
+
+    img {
+        padding: 20px 0px;
+        height: 100px;
     }
 }
