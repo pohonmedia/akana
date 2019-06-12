@@ -301,3 +301,51 @@
 
 
 }
+
+/*------------------------------------*\
+    Our Team Styling
+\*------------------------------------*/
+.c-our-team {
+    min-height: 350px;
+    background-color: $color--primary;
+
+    .c-description {
+        padding: 20px 0px;
+
+        h2 {
+            font-size: 30px;
+            color: $color--secondary;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 15px;
+            color: $color--secondary;
+            letter-spacing: 1px;
+        }
+    }
+
+    .c-profile {
+        background-color: transparent;
+        border: none;
+
+        h6 {
+            color: $color--secondary;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+        }
+
+        p {
+            font-size: 15px;
+            color: $color--secondary;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        img {
+            width: 150px;
+        }
+    }
+}
