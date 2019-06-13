@@ -26,7 +26,7 @@
     }
 
 
-    /* About us responsive */
+    /* Home responsive */
 
     .c-home-slider {
         // padding-top: 50px;
@@ -166,6 +166,29 @@
 
     .c-footer {
         display: none !important;
+    }
+
+    /* About us responsive */
+    .c-header-about {
+        height: unset !important;
+    }
+
+    .c-header--left {
+        height: 200px;
+
+        &:before {
+            min-width: 0px;
+            background: unset !important;
+        }
+    }
+
+    .c-header--right {
+        left: 0;
+        padding-top: 20px;
+
+        .btn {
+            min-width: 100%;
+        }
     }
 
 }
