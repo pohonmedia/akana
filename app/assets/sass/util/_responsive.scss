@@ -250,6 +250,70 @@
         }
     }
 
+    .c-event-service {
+        padding: 20px;
+
+        .row {
+            height: unset !important;
+        }
+
+        .c-description {
+            text-align: center;
+        }
+
+    }
+
+    .c-our-team {
+        .c-description {
+            padding-top: 20px;
+            padding-bottom: 0px;
+        }
+    }
+
+    .c-product-carousel {
+        .swiper-slide {
+            .col {
+                padding: 0px !important;
+            }
+        }
+    }
+
+    .c-cta-about {
+        min-height: unset !important;
+
+        .c-content {
+            padding-top: unset;
+            min-height: 300px !important;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card {
+            min-height: 250px !important;
+            min-width: 80%;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+            background-color: $color--primary;
+            color: $font-color--secondary;
+
+            &-body {
+                padding: 10px;
+            }
+        }
+
+        h6 {
+            font-size: 20px;
+            letter-spacing: 0px;
+            font-weight: 500;
+            max-width: unset;
+            text-align: center;
+            word-break: keep-all;
+        }
+
+        a {
+            min-width: 100%;
+        }
+    }
 }
 
 
