@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    Package List styling
+\*------------------------------------*/
+
+.c-pkg-list-header {
+    min-height: 550px !important;
+    @include content-pkg(url("../img/bg--5.jpg"));
+
+    &-content {
+        min-height: 550px;
+        background-color: rgba(3, 158, 165, 0.55);
+    }
+
+    .card {
+        max-width: 80%;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+    }
+
+    h3 {
+        font-size: 30px;
+        color: $color--secondary;
+        padding-bottom: 25px;
+        letter-spacing: 2px;
+    }
+
+    .form {
+        &-control {
+            width: 80%;
+            border: none;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 1px;
+
+        }
+    }
+
+    .form-control {
+        &:first-letter {
+            text-transform: capitalize;
+        }
+    }
+}
