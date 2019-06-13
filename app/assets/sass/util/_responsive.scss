@@ -197,6 +197,59 @@
         }
     }
 
+    .c-service-about {
+        .o-service-icon {
+            margin: auto;
+        }
+
+        .media-body {
+            padding: 20px 0px;
+            text-align: center;
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .c-travel-about {
+        .my-auto {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .btn {
+            min-width: 100% !important;
+        }
+    }
+
+    .c-travel-categories {
+        h2 {
+            font-size: 20px;
+        }
+
+        .btn {
+            min-width: 100% !important;
+        }
+    }
+
+    .c-mice-about {
+        .my-auto {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .btn {
+            min-width: 100% !important;
+        }
+    }
+
 }
 
 
