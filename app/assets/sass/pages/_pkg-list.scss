@@ -75,3 +75,52 @@
         margin: auto;
     }
 }
+
+/*------------------------------------*\
+    Categories styling
+\*------------------------------------*/
+
+.c-pkg-list-categories {
+    min-height: 300px !important;
+    @include content-pkg(url("../img/bg--5.jpg"));
+
+    &-content {
+        min-height: 300px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .nav {
+        &-item {
+
+            margin-left: 0px;
+
+            .active {
+                background-color: $color--primary;
+            }
+
+            a {
+                text-transform: capitalize;
+                color: $font-color--primary;
+            }
+        }
+    }
+
+    h2 {
+        color: $color--primary;
+        letter-spacing: 2px;
+        margin-top: 80px;
+    }
+
+    img {
+        height: 50px;
+    }
+
+    .card {
+        width: 80%;
+        top: 50;
+
+        &-body {
+            padding: 0px;
+        }
+    }
+}
