@@ -315,6 +315,33 @@
             min-width: 100%;
         }
     }
+
+    /* Package list responsive */
+    .c-pkg-list {
+
+        &-header {
+
+            .card {
+                max-width: unset;
+            }
+
+            .form-control {
+                max-width: unset;
+                margin-bottom: 20px;
+                min-width: 90%;
+            }
+
+            .btn {
+                min-width: 80%;
+            }
+
+        }
+
+        &-categories-content {
+            margin-top: 200px;
+        }
+
+    }
 }
 
 
