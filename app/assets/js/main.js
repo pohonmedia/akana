@@ -29,3 +29,26 @@ var swiper = new Swiper('.swiper-container', {
         }
     }
 });
+
+
+//slider price
+
+var slider = document.getElementById('slider');
+
+noUiSlider.create(slider, {
+    start: [500, 4000],
+    range: {
+        'min': [100],
+        '10%': [500, 500],
+        '50%': [4000, 1000],
+        'max': [10000]
+    }
+});
+
+var sliderValue = document.getElementById('slider-value');
+
+slider.noUiSlider.on('update', function (values) {
+    sliderValue.innerHTML = values.join(' - ');
+});
+
+//selectize

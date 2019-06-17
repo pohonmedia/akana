@@ -15,12 +15,14 @@ const sourcemaps = require('gulp-sourcemaps');
 //asset css
 var bootstrapCSS = './node_modules/bootstrap/dist/css/bootstrap.min.css';
 var swiperCSS = './node_modules/swiper/dist/css/swiper.min.css';
+var nouisliderCSS = './node_modules/nouislider/distribute/nouislider.min.css';
 
 //asset js
 var bootstrapJS = './node_modules/bootstrap/dist/js/bootstrap.min.js';
 var jqueryJS = './node_modules/jquery/dist/jquery.slim.min.js';
 var popperJS = './node_modules/popper.js/dist/umd/popper.min.js';
 var swiperJS = './node_modules/swiper/dist/js/swiper.min.js';
+var nouisliderJS = './node_modules/nouislider/distribute/nouislider.min.js';
 
 //assets dir
 var ASSETS = {
@@ -63,7 +65,7 @@ function folder() {
 
 // moving css
 function css() {
-    return src([bootstrapCSS, swiperCSS])
+    return src([bootstrapCSS, swiperCSS, nouisliderCSS])
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({
@@ -84,7 +86,7 @@ function css() {
 
 // moving js
 function js() {
-    return src([jqueryJS, popperJS, bootstrapJS, swiperJS])
+    return src([jqueryJS, popperJS, bootstrapJS, swiperJS, nouisliderJS])
         .pipe(concat('plugin.min.js'))
         .pipe(uglify())
         .pipe(dest(ASSETS.JS))
@@ -140,9 +142,12 @@ function watching() {
 
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./",
+            serveStaticOptions: {
+                extensions: ['html']
+            }
         },
-        startPath: './app/index.html',
+        startPath: './app/about-us',
         port: 3000
     });
     watch('./app/assets/sass/**/*.scss', minify);

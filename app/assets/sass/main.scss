@@ -4,6 +4,18 @@
 // import pages section
 @import "./pages/home";
 @import "./pages/about";
+<<<<<<< HEAD
+=======
+@import "./pages/pkg-list";
+
+//import components 
+@import "./components/buttons";
+@import "./components/nav";
+
+// import utilities
+@import "./util/variables";
+@import "./util/responsive";
+>>>>>>> 707f83d7460563a10186c6aac53c6dde035673c3
 
 
 /*------------------------------------*\
