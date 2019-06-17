@@ -16,7 +16,6 @@ const sourcemaps = require('gulp-sourcemaps');
 var bootstrapCSS = './node_modules/bootstrap/dist/css/bootstrap.min.css';
 var swiperCSS = './node_modules/swiper/dist/css/swiper.min.css';
 var nouisliderCSS = './node_modules/nouislider/distribute/nouislider.min.css';
-var selectizeCSS = './node_modules/selectize/dist/css/selectize.bootstrap3.css';
 
 //asset js
 var bootstrapJS = './node_modules/bootstrap/dist/js/bootstrap.min.js';
@@ -24,7 +23,6 @@ var jqueryJS = './node_modules/jquery/dist/jquery.slim.min.js';
 var popperJS = './node_modules/popper.js/dist/umd/popper.min.js';
 var swiperJS = './node_modules/swiper/dist/js/swiper.min.js';
 var nouisliderJS = './node_modules/nouislider/distribute/nouislider.min.js';
-var selectizeJS = './node_modules/selectize/dist/js/selectize.min.js';
 
 //assets dir
 var ASSETS = {
@@ -67,7 +65,7 @@ function folder() {
 
 // moving css
 function css() {
-    return src([bootstrapCSS, swiperCSS, nouisliderCSS, selectizeCSS])
+    return src([bootstrapCSS, swiperCSS, nouisliderCSS])
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({
@@ -88,7 +86,7 @@ function css() {
 
 // moving js
 function js() {
-    return src([jqueryJS, popperJS, bootstrapJS, swiperJS, nouisliderJS, selectizeJS])
+    return src([jqueryJS, popperJS, bootstrapJS, swiperJS, nouisliderJS])
         .pipe(concat('plugin.min.js'))
         .pipe(uglify())
         .pipe(dest(ASSETS.JS))
