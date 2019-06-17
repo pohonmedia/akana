@@ -220,3 +220,28 @@
     }
 
 }
+
+/*------------------------------------*\
+    CTA styling
+\*------------------------------------*/
+
+.c-pkg-list-cta {
+    min-height: 300px !important;
+    @include content-pkg(url("../img/bg--2.jpg"));
+
+    &-content {
+        min-height: 300px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    h2 {
+        text-transform: unset;
+        color: $color--primary;
+    }
+
+    .btn {
+        min-width: 250px;
+        margin-top: 15px;
+        padding: 10px;
+    }
+}
