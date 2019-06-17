@@ -8,7 +8,9 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
+    "nouislider": "^13.1.5",
     "popper.js": "^1.15.0",
+    "selectize": "^0.12.6",
     "swiper": "^4.5.0"
   },
   "devDependencies": {
