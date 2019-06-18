@@ -41,3 +41,30 @@
         }
     }
 }
+
+/*------------------------------------*\
+    Product styling
+\*------------------------------------*/
+
+.c-dest-list-product {
+
+    padding: 20px;
+
+    h1 {
+        color: $color--primary;
+        font-size: 30px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+
+    .col-lg-6 {
+        padding: 10px;
+    }
+
+    .pagination {
+        .page-link {
+            color: $color--primary;
+        }
+    }
+
+}
