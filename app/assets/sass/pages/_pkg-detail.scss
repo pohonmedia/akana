@@ -72,3 +72,61 @@
         }
     }
 }
+
+
+/*------------------------------------*\
+    Tour highlight style
+\*------------------------------------*/
+
+.c-pkg-detail-highlight {
+    padding: 0;
+
+    .card {
+        min-height: 350px;
+        border: 0;
+        border-radius: 0;
+
+        &-img {
+            border-radius: 0
+        }
+
+        &-img-overlay {
+            position: absolute;
+            display: block;
+            // width: 100vw;
+            // height: 650;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 10, 0.4) !important;
+            z-index: 1;
+
+            &:hover {
+                background: rgba(10, 10, 10, 0.1) !important;
+            }
+        }
+    }
+
+    .c-content {
+        bottom: 0;
+        position: absolute;
+        text-transform: capitalize;
+
+        h5 {
+            margin-bottom: 0;
+        }
+
+        a {
+            padding-left: 0;
+            color: $color--primary;
+        }
+    }
+
+    img {
+        min-height: 350px;
+        object-fit: cover;
+    }
+
+
+}
