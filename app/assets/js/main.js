@@ -2,6 +2,8 @@ $(document).ready(function () {
     console.log("javascript ready!");
 });
 
+//swiper
+
 var swiper = new Swiper('.swiper-container', {
 
     slidesPerView: 3,
