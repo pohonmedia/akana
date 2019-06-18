@@ -134,6 +134,14 @@
     Timeline style
 \*------------------------------------*/
 
+.c-pkg-detail-timeline {
+
+    h4 {
+        color: $color--primary
+    }
+
+}
+
 ul.timeline {
     list-style-type: none;
     position: relative;
@@ -169,5 +177,47 @@ ul.timeline {
 
     a {
         color: $color--primary;
+    }
+}
+
+/*------------------------------------*\
+    Tour detail style
+\*------------------------------------*/
+
+.c-pkg-detail-tour {
+    min-height: 400px;
+    @include content-pkg(url("../img/bg--3.jpg"));
+
+    &-content {
+        min-height: 400px;
+        background-color: rgba(3, 158, 165, 0.6);
+        padding: 20px;
+    }
+
+    img {
+        background-color: $color--primary;
+        border-radius: 10px;
+        padding: 12px;
+        max-width: 55px;
+        box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+    }
+
+    p {
+        padding: 8px;
+        font-weight: 400;
+        font-size: 15px;
+        color: $font-color--secondary;
+        letter-spacing: 1px;
+    }
+
+    h5 {
+        color: $font-color--secondary;
+        letter-spacing: 2px;
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .c-konten-bawah {
+        margin-bottom: 20px;
     }
 }
