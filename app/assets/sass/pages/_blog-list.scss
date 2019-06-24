@@ -2,7 +2,6 @@
     Header styling
 \*------------------------------------*/
 
-
 .c-blog-list-header {
     height: 80% !important;
     padding: 0 !important;
@@ -63,4 +62,60 @@
             }
         }
     }
+}
+
+/*------------------------------------*\
+    Konten styling
+\*------------------------------------*/
+
+.c-blog-list-konten {
+    margin-bottom: 20px;
+
+    &-kiri {
+
+        .card {
+
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.16);
+
+            &-img-top {
+                min-height: 200px;
+                max-height: 200px;
+                object-fit: cover;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            &-img-overlay {
+                top: 100;
+
+                p {
+                    text-transform: capitalize;
+                    color: #ffffff;
+                }
+
+                h5 {
+                    color: #ffffff;
+                }
+
+            }
+
+            a {
+                padding-left: 0px;
+                text-transform: capitalize;
+                color: $color--primary;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+
+            &-text {
+                font-size: 15px;
+                text-align: justify;
+            }
+
+        }
+
+    }
+
 }
