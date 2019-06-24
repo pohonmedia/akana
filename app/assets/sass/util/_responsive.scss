@@ -349,6 +349,21 @@
             font-size: 12px;
         }
     }
+
+    /* Blog list responsive */
+    .c-blog-list-header {
+        p {
+            display: none;
+        }
+    }
+
+    .jumbotron {
+        height: 30% !important;
+    }
+
+    .c-blog-list-header-image {
+        display: none;
+    }
 }
 
 
