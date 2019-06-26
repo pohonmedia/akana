@@ -1,0 +1,121 @@
+/*------------------------------------*\
+    Header styling
+\*------------------------------------*/
+
+.c-blog--bg {
+    min-height: 85vh;
+    max-height: 85vh;
+    @include content-pkg(url("../img/bg--12.jpg"));
+
+    .container {
+        padding: 20px;
+        min-height: 85vh;
+    }
+
+}
+
+.c-blog-content {
+
+    .card {
+        max-width: 85%;
+        margin-top: -20%;
+        border: none;
+        padding: 20px;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.16);
+    }
+
+    h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+    }
+
+    p {
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: $color--primary;
+        padding-top: 5px;
+    }
+}
+
+.o-post {
+
+    p {
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #212121;
+    }
+
+}
+
+/*------------------------------------*\
+    Related post styling
+\*------------------------------------*/
+
+.c-blog-related {
+    max-width: 90%;
+    margin: auto;
+    padding-top: 30px;
+
+    h3 {
+        font-size: 25px;
+        letter-spacing: 1px;
+        color: $color--primary;
+        text-transform: capitalize;
+    }
+
+    hr {}
+
+    .card {
+
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.16);
+        max-width: unset;
+        padding: unset;
+        margin-top: 20px;
+
+        &-img-top {
+            min-height: 200px;
+            max-height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        &-img-overlay {
+            top: 100;
+
+            p {
+                text-transform: capitalize;
+                color: #ffffff;
+            }
+
+            h5 {
+                color: #ffffff;
+            }
+
+        }
+
+        a {
+            padding-left: 0px;
+            text-transform: capitalize;
+            color: $color--primary;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        &-text {
+            font-size: 15px;
+            text-align: justify;
+            color: #212121;
+            font-weight: 400;
+        }
+
+    }
+
+    .c-content {
+        background-color: unset;
+        padding-top: unset;
+    }
+}
