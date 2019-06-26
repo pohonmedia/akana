@@ -1,0 +1,86 @@
+<!-- set title -->
+{% set title = 'Blog' %}
+{% set description = 'Blog' %}
+
+<!-- extends from layout -->
+{% extends "layout.njk" %}
+
+<!-- contents start from here -->
+{% block content %}
+
+    <!-- bg img start here -->
+    <div class="jumbotron c-blog--bg">
+        <div class="c-blog--bg-content">
+
+            <!-- blog post start here -->
+            <div class="container">
+
+                <div class="card mx-auto">
+                    <div class="card-body">
+
+                        <!-- card title start here -->
+                        <h1 class="text-left">
+                            this is long blog post title
+                        </h1>
+                        <!-- card title end here -->
+
+                        <hr>
+
+                        <!-- card date start here -->
+                        <div class="row">
+                            <div class="col-lg-2 text-center">
+                                <p>
+                                    12 Mei 2019
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <button type="button" class="btn btn-primary badge-pill badge-primary">
+                                    Tour & Travel
+                                </button>
+                            </div>
+                        </div>
+                        <!-- card date end here -->
+
+                        <!-- card post start here -->
+                        <div class="row">
+                            <div class="col-12 o-post">
+
+                                <img src="http://placehold.it/1250x400" alt="" class="img-fluid p-3">
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                    <br><br>
+                                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                    <br><br>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <img src="https://placehold.it/400x400" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- card post end here -->
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- blog post end here -->
+
+        </div>
+    </div>
+    <!-- bg img end here -->
+
+{% endblock %}
+<!-- contents end here -->

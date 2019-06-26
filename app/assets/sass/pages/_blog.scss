@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    Header styling
+\*------------------------------------*/
+
+.c-blog--bg {
+    min-height: 85vh;
+    max-height: 85vh;
+    @include content-pkg(url("../img/bg--12.jpg"));
+
+    .container {
+        padding: 20px;
+        min-height: 85vh;
+    }
+
+    &-content {
+        min-height: 85vh;
+        max-height: 85vh;
+        background-color: rgba(3, 158, 165, 0.2);
+    }
+
+    .card {
+        max-width: 85%;
+        margin-top: 20%;
+        border: none;
+        padding: 20px;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.16);
+    }
+
+    h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+    }
+
+    p {
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: $color--primary;
+        padding-top: 5px;
+    }
+}
+
+.o-post {
+
+    p {
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #212121;
+    }
+
+}
