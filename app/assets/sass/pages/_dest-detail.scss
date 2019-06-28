@@ -4,6 +4,7 @@
 
 .c-dest-detail-header {
     min-height: 85vh !important;
+    margin-bottom: 0px;
     @include content-pkg(url("../img/bg--12.jpg"));
 
     .container {
@@ -86,4 +87,65 @@
         max-height: 30px;
     }
 
+}
+
+/*------------------------------------*\
+    Package list style
+\*------------------------------------*/
+
+
+.c-dest-detail-pkg {
+    background-color: $color--primary;
+    padding: 20px;
+    min-height: 400px;
+
+    .c-card {
+        max-width: 80%;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+
+        .card-body {
+            padding: 15px;
+        }
+    }
+
+    h3 {
+        font-size: 30px;
+        color: $color--secondary;
+        padding-bottom: 25px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+
+    .form {
+        &-control {
+            width: 80%;
+            border: none;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 1px;
+
+        }
+    }
+
+    .form-control {
+        &:first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    .c-card-product {
+        max-width: 80%;
+
+        .card-img-top {
+            max-height: 200px;
+        }
+
+    }
+
+    .pagination {
+        .page-link {
+            color: $color--primary;
+        }
+    }
 }
