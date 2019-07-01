@@ -94,3 +94,38 @@
     }
 
 }
+
+
+/*------------------------------------*\
+    Recomendation styling
+\*------------------------------------*/
+
+.c-mice-recomendation {
+    height: 250px;
+    background-color: $color--secondary;
+
+    .wording {
+        padding: 30px;
+
+        h2 {
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            color: $color--primary;
+        }
+
+        p {
+            max-width: 450px;
+            letter-spacing: 1px;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            word-break: keep-all;
+            opacity: 0.8;
+        }
+    }
+
+    .c-card-product {
+        width: 250px;
+        margin: auto;
+    }
+}
