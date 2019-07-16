@@ -1,0 +1,223 @@
+/*------------------------------------*\
+    Header style
+\*------------------------------------*/
+
+.c-pkg-detail-header {
+    min-height: 85vh !important;
+    @include content-pkg(url("../img/bg--3.jpg"));
+
+    .container {
+        padding: 20px;
+        min-height: 85vh;
+    }
+
+    &-content {
+        min-height: 85vh !important;
+        background-color: rgba(3, 158, 165, 0.6);
+        color: $font-color--secondary;
+    }
+
+    .media {
+        max-width: 500px;
+    }
+
+    h1 {
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+
+    h5 {
+        font-weight: 400;
+        font-size: 18px;
+        padding-top: 10px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+
+    p {
+        max-width: 600px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+
+    img {
+        max-height: 30px;
+    }
+}
+
+/*------------------------------------*\
+    What to do style
+\*------------------------------------*/
+
+
+.c-pkg-detail-todo {
+    min-height: 300px;
+
+    h1 {
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        color: $color--primary;
+    }
+
+    p {
+        letter-spacing: 1px;
+        font-size: 15px;
+        opacity: 0.5;
+    }
+
+    .c-product-carousel {
+        .col {
+            padding: 10px !important;
+        }
+    }
+}
+
+
+/*------------------------------------*\
+    Tour highlight style
+\*------------------------------------*/
+
+.c-pkg-detail-highlight {
+    padding: 0;
+
+    .card {
+        min-height: 350px;
+        border: 0;
+        border-radius: 0;
+
+        &-img {
+            border-radius: 0
+        }
+
+        &-img-overlay {
+            position: absolute;
+            display: block;
+            // width: 100vw;
+            // height: 650;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 10, 0.4) !important;
+            z-index: 1;
+
+            &:hover {
+                background: rgba(10, 10, 10, 0.1) !important;
+            }
+        }
+    }
+
+    .c-content {
+        bottom: 0;
+        position: absolute;
+        text-transform: capitalize;
+
+        h5 {
+            margin-bottom: 0;
+        }
+
+        a {
+            padding-left: 0;
+            color: $color--primary;
+        }
+    }
+
+    img {
+        min-height: 350px;
+        object-fit: cover;
+    }
+
+}
+
+/*------------------------------------*\
+    Timeline style
+\*------------------------------------*/
+
+.c-pkg-detail-timeline {
+
+    h4 {
+        color: $color--primary
+    }
+
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+
+    &:before {
+        content: ' ';
+        background: #d4d9df;
+        display: inline-block;
+        position: absolute;
+        left: 29px;
+        width: 2px;
+        height: 100%;
+        z-index: 400;
+    }
+
+    li {
+        margin: 20px 0;
+        padding-left: 20px;
+
+        &:before {
+            content: ' ';
+            background: white;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid $color--primary;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+        }
+    }
+
+    a {
+        color: $color--primary;
+    }
+}
+
+/*------------------------------------*\
+    Tour detail style
+\*------------------------------------*/
+
+.c-pkg-detail-tour {
+    min-height: 400px;
+    @include content-pkg(url("../img/bg--3.jpg"));
+
+    &-content {
+        min-height: 400px;
+        background-color: rgba(3, 158, 165, 0.6);
+        padding: 20px;
+    }
+
+    img {
+        background-color: $color--primary;
+        border-radius: 10px;
+        padding: 12px;
+        max-width: 55px;
+        box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+    }
+
+    p {
+        padding: 8px;
+        font-weight: 400;
+        font-size: 15px;
+        color: $font-color--secondary;
+        letter-spacing: 1px;
+    }
+
+    h5 {
+        color: $font-color--secondary;
+        letter-spacing: 2px;
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .c-konten-bawah {
+        margin-bottom: 20px;
+    }
+}

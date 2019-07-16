@@ -1,0 +1,255 @@
+/*------------------------------------*\
+    Header styling
+\*------------------------------------*/
+
+.c-mice-list-header {
+    min-height: 550px !important;
+    @include content-pkg(url("../img/bg--6.jpg"));
+
+    &-content {
+        min-height: 550px;
+        background-color: rgba(3, 158, 165, 0.55);
+    }
+
+    .card {
+        max-width: 80%;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+    }
+
+    h3 {
+        font-size: 30px;
+        color: $color--secondary;
+        padding-bottom: 25px;
+        letter-spacing: 2px;
+    }
+
+    .form {
+        &-control {
+            width: 80%;
+            border: none;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 1px;
+
+        }
+    }
+
+    .form-control {
+        &:first-letter {
+            text-transform: capitalize;
+        }
+    }
+}
+
+/*------------------------------------*\
+    Recomendation styling
+\*------------------------------------*/
+
+.c-mice-list-recomendation {
+    height: 450px;
+    background-color: $color--secondary;
+
+    .wording {
+        padding: 30px;
+
+        h2 {
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            color: $color--primary;
+        }
+
+        p {
+            max-width: 450px;
+            letter-spacing: 1px;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            word-break: keep-all;
+            opacity: 0.8;
+        }
+    }
+
+    .c-card-product {
+        width: 250px;
+        margin: auto;
+    }
+}
+
+/*------------------------------------*\
+    Categories styling
+\*------------------------------------*/
+
+.c-mice-list-categories {
+    min-height: 300px !important;
+    @include content-pkg(url("../img/bg--5.jpg"));
+
+    &-content {
+        min-height: 300px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .nav {
+        &-item {
+
+            margin-left: 0px;
+
+            .active {
+                background-color: $color--primary;
+            }
+
+            a {
+                text-transform: capitalize;
+                color: $font-color--primary;
+            }
+        }
+    }
+
+    h2 {
+        color: $color--primary;
+        letter-spacing: 2px;
+        margin-top: 80px;
+    }
+
+    img {
+        height: 50px;
+    }
+
+    .card {
+        width: 80%;
+        top: 50;
+        border: none;
+        box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+
+        &-body {
+            padding: 0px;
+        }
+    }
+}
+
+/*------------------------------------*\
+    Content styling
+\*------------------------------------*/
+
+.c-mice-list-content {
+    min-height: 400px;
+    margin-top: 50px;
+
+    .c-content-kiri {
+
+        .card {
+
+            &-body {
+                padding: 0;
+            }
+
+            &-header {
+                background-color: unset;
+                font-weight: 500;
+                font-size: 18px;
+                letter-spacing: 1px;
+                text-transform: capitalize;
+                color: $color--primary;
+            }
+
+        }
+
+        .c-content {
+            margin: 20px;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            margin: 0px 10px;
+        }
+
+        #slider {
+            margin: 20px 10px;
+
+            &-value {
+                text-align: center;
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+        }
+
+        .noUi {
+            &-target {
+                background: $color--primary;
+                border: none;
+                border-radius: 10px;
+                box-shadow: unset;
+            }
+
+            &-horizontal {
+                height: 15px;
+            }
+        }
+
+        .dropdown {
+            margin: 20px 10px;
+        }
+
+        .btn-secondary {
+            background-color: $color--primary;
+            border: none;
+        }
+
+    }
+
+    .c-content-kanan {
+
+        .card {
+            min-width: unset;
+            margin: 10px;
+
+            &-img-top {
+                max-height: 150px;
+            }
+        }
+
+        .pagination {
+            .page-link {
+                color: $color--primary;
+            }
+        }
+
+    }
+
+}
+
+/*------------------------------------*\
+    CTA styling
+\*------------------------------------*/
+
+.c-mice-list-cta {
+    min-height: 300px !important;
+    @include content-pkg(url("../img/bg--2.jpg"));
+
+    &-content {
+        min-height: 300px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    h2 {
+        text-transform: unset;
+        color: $color--primary;
+    }
+
+    .btn {
+        min-width: 250px;
+        margin-top: 15px;
+        padding: 10px;
+    }
+}
+
+/*------------------------------------*\
+    Footer styling
+\*------------------------------------*/
+
+.c-mice-list-footer {
+    margin-top: 100px !important;
+}

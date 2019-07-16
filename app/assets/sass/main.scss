@@ -4,6 +4,14 @@
 // import pages section
 @import "./pages/home";
 @import "./pages/about";
+@import "./pages/pkg-list";
+@import "./pages/pkg-detail";
+@import "./pages/dest-list";
+@import "./pages/blog-list";
+@import "./pages/blog";
+@import "./pages/dest-detail";
+@import "./pages/mice-list";
+@import "./pages/product-detail";
 
 //import components 
 @import "./components/buttons";
@@ -12,6 +20,7 @@
 // import utilities
 @import "./util/variables";
 @import "./util/responsive";
+@import "./util/mixins";
 
 
 /*------------------------------------*\

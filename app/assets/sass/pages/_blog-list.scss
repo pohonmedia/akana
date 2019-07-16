@@ -1,0 +1,180 @@
+/*------------------------------------*\
+    Header styling
+\*------------------------------------*/
+
+.c-blog-list-header {
+    height: 80% !important;
+    padding: 0 !important;
+    background-color: #ffffff;
+
+
+    &-image {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            /* bottom: 200; */
+            left: -200;
+            height: 100%;
+            min-width: 800px;
+            background: url("../img/svg--3.svg") no-repeat right;
+            transform: scaleX(-1);
+        }
+
+        background-image: url("../img/bg--11.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center left;
+        padding: 0;
+
+        // @include content-pkg(url("../img/bg--2.jpg"));
+    }
+
+
+    &-description {
+        left: unset;
+        padding-left: 50px;
+        z-index: 100;
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 30px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: $color--primary;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 30px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .nav {
+            &-item {
+                margin-left: 0.5em !important;
+                font-size: 20px;
+            }
+
+            &-link {
+                color: $color--primary !important;
+            }
+        }
+    }
+}
+
+/*------------------------------------*\
+    Konten styling
+\*------------------------------------*/
+
+.c-blog-list-konten {
+    margin-bottom: 20px;
+
+    &-kiri {
+
+        .card {
+
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.16);
+
+            &-img-top {
+                min-height: 200px;
+                max-height: 200px;
+                object-fit: cover;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            &-img-overlay {
+                top: 100;
+
+                p {
+                    text-transform: capitalize;
+                    color: #ffffff;
+                }
+
+                h5 {
+                    color: #ffffff;
+                }
+
+            }
+
+            a {
+                padding-left: 0px;
+                text-transform: capitalize;
+                color: $color--primary;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+
+            &-text {
+                font-size: 15px;
+                text-align: justify;
+            }
+
+        }
+
+    }
+
+    &-kanan {
+        padding: 0px 30px;
+        border-radius: 5px;
+
+        .form-inline {
+            background-color: $color--primary;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 20px;
+            color: #ffffff;
+            text-transform: capitalize;
+        }
+
+        .c-konten {
+
+            &-kategori {
+                h5 {
+                    text-transform: capitalize;
+                    color: $color--primary;
+                }
+
+                .btn {
+                    text-transform: capitalize;
+                }
+            }
+
+            &-rekomendasi {
+                h5 {
+                    text-transform: capitalize;
+                    color: $color--primary;
+                }
+
+                .media {
+
+                    &-body {
+                        h5 {
+                            font-size: 15px !important;
+                        }
+
+                        p {
+                            margin-bottom: 0px;
+                            font-size: 15px;
+                            margin-top: 15px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+
+    }
+}
