@@ -364,6 +364,54 @@
     .c-blog-list-header-image {
         display: none;
     }
+
+    /* Product detail responsive */
+    .c-product-detail {
+
+        &-gallery {
+            max-height: 200px;
+        }
+
+        &-thumb {
+            display: none;
+        }
+
+        &-kanan {
+            h1 {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .nav-item {
+                margin-left: 0px;
+            }
+
+            .nav-pills {
+                margin-left: 15px;
+            }
+        }
+
+        &-about {
+            margin-top: unset !important;
+        }
+
+    }
+
+    .c-mice-recomendation {
+        margin-top: 20px;
+        height: unset;
+
+        .wording {
+            padding: 20px 10px 0px;
+
+            h2 {
+                font-size: 20px;
+                text-align: center;
+
+            }
+        }
+    }
+
 }
 
 
