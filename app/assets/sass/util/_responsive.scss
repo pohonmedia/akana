@@ -10,7 +10,6 @@
     /* Global responsive */
 
     .navbar {
-        max-height: 50px;
         padding: 0px 15px !important;
         background-color: #ffffff;
 
@@ -22,6 +21,14 @@
             font-size: 1rem;
             padding: .30rem;
             background-color: $color--primary;
+        }
+
+        &-collapse {
+            z-index: 1000;
+            background-color: white;
+            width: 100%;
+            border-radius: 15px;
+            padding: 10px;
         }
     }
 
@@ -38,6 +45,7 @@
         .carousel-indicators {
             bottom: 0;
         }
+
     }
 
 
@@ -199,6 +207,8 @@
     }
 
     .c-service-about {
+        margin-top: 400px !important;
+
         .o-service-icon {
             margin: auto;
         }
@@ -210,6 +220,21 @@
             h2 {
                 font-size: 18px;
             }
+        }
+    }
+
+    .c-service-home {
+        z-index: unset;
+        height: unset;
+        margin-bottom: unset;
+
+        .o-title {
+            padding: 50px !important;
+            padding-bottom: unset;
+        }
+
+        .c-card {
+            margin-top: 20px;
         }
     }
 
@@ -344,22 +369,53 @@
     }
 
     /* Destination list responsive */
+    .c-dest-list-header-content {
+
+        .card {
+
+            max-width: 90%;
+
+            &-body {
+                padding: 1rem !important;
+            }
+        }
+
+        .form-control {
+            font-size: 15px;
+        }
+
+        .btn--primary {
+            min-width: 90%;
+        }
+    }
+
     .c-dest-list-product {
         .card-text {
             font-size: 12px;
         }
     }
 
+    /* Destination detail responsive */
+    .c-dest-detail-header {
+        min-height: 85vh !important;
+
+        .card {
+            margin-top: 20px;
+        }
+    }
+
     /* Blog list responsive */
     .c-blog-list-header {
+        height: 30% !important;
+
         p {
             display: none;
         }
     }
 
-    .jumbotron {
-        height: 30% !important;
-    }
+    // .jumbotron {
+    //     height: 30% !important;
+    // }
 
     .c-blog-list-header-image {
         display: none;
@@ -410,6 +466,12 @@
 
             }
         }
+    }
+
+    /* Mice list responsive */
+
+    .c-mice-list-categories {
+        margin-top: 100px;
     }
 
 }
