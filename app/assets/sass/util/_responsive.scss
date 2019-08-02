@@ -395,16 +395,27 @@
         }
     }
 
+    /* Destination detail responsive */
+    .c-dest-detail-header {
+        min-height: 85vh !important;
+
+        .card {
+            margin-top: 20px;
+        }
+    }
+
     /* Blog list responsive */
     .c-blog-list-header {
+        height: 30% !important;
+
         p {
             display: none;
         }
     }
 
-    .jumbotron {
-        height: 30% !important;
-    }
+    // .jumbotron {
+    //     height: 30% !important;
+    // }
 
     .c-blog-list-header-image {
         display: none;
@@ -455,6 +466,12 @@
 
             }
         }
+    }
+
+    /* Mice list responsive */
+
+    .c-mice-list-categories {
+        margin-top: 100px;
     }
 
 }
