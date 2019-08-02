@@ -369,6 +369,26 @@
     }
 
     /* Destination list responsive */
+    .c-dest-list-header-content {
+
+        .card {
+
+            max-width: 90%;
+
+            &-body {
+                padding: 1rem !important;
+            }
+        }
+
+        .form-control {
+            font-size: 15px;
+        }
+
+        .btn--primary {
+            min-width: 90%;
+        }
+    }
+
     .c-dest-list-product {
         .card-text {
             font-size: 12px;
