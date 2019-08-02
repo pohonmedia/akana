@@ -10,7 +10,6 @@
     /* Global responsive */
 
     .navbar {
-        max-height: 50px;
         padding: 0px 15px !important;
         background-color: #ffffff;
 
@@ -22,6 +21,14 @@
             font-size: 1rem;
             padding: .30rem;
             background-color: $color--primary;
+        }
+
+        &-collapse {
+            z-index: 1000;
+            background-color: white;
+            width: 100%;
+            border-radius: 15px;
+            padding: 10px;
         }
     }
 
@@ -38,6 +45,7 @@
         .carousel-indicators {
             bottom: 0;
         }
+
     }
 
 
@@ -210,6 +218,21 @@
             h2 {
                 font-size: 18px;
             }
+        }
+    }
+
+    .c-service-home {
+        z-index: unset;
+        height: unset;
+        margin-bottom: unset;
+
+        .o-title {
+            padding: 50px !important;
+            padding-bottom: unset;
+        }
+
+        .c-card {
+            margin-top: 20px;
         }
     }
 
