@@ -179,7 +179,8 @@
     /* About us responsive */
 
     .c-header-about {
-        height: unset !important;
+        // height: unset !important;
+        height: 65% !important;
     }
 
     .c-header--left {
@@ -207,7 +208,6 @@
     }
 
     .c-service-about {
-        margin-top: 400px !important;
 
         .o-service-icon {
             margin: auto;

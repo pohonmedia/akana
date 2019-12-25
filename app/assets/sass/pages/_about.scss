@@ -45,6 +45,27 @@
     // @include content-pkg(url("../img/bg--2.jpg"));
 }
 
+@media (min-width:1400px) {
+
+    .c-header--left {
+        &:before {
+            opacity: 0;
+        }
+    }
+
+    .c-header--right {
+        left: unset !important;
+        padding-left: 100px;
+    }
+
+}
+
+@media (max-width:450px) {
+    .c-service-about {
+        margin-top: 0px !important;
+    }
+}
+
 .c-header--right {
     left: -100;
 
