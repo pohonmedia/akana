@@ -36,7 +36,7 @@ var ASSETS = {
 
 //nunjucks dir
 var COMPILE = {
-  SRC: "./app/pages/mice-detail-new.njk",
+  SRC: "./app/pages/**.njk",
   TMP: "./app/template/",
   DST: "./app"
 };
